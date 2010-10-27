@@ -1,0 +1,16 @@
+﻿<yogomeeapplication>
+  <globals>
+    <declare name="Url" type="string"/>
+    <declare name="TwitterUserName" type="string"/>
+    <declare name="TwitterPassword" type="string"/>
+    <declare name="ReturnText" type="string"/>
+    <declare name="TwitterStatus" type="string"/>
+    <declare name="MyXmlDoc" type="XmlDocument"/>
+    <declare name="MyXmlNode" type="XmlNode"/>
+  </globals>
+  <main>
+    <set name="TwitterUserName" value="eisernWolf@gmail.com"/>
+    <set name="TwitterPassword" value="1323ae"/>
+
+  </main>
+</yogomeeapplication>

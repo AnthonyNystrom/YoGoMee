@@ -1,0 +1,9 @@
+﻿<yogomeeapplication>
+  <globals>
+    <declare name="html" type="string"/>
+  </globals>
+  <main>
+    <webpost url="http://www.next2friends.com" outputformat="text" outputvar="html"/>
+    <action type="text" message="{html}"/>
+  </main>
+</yogomeeapplication>

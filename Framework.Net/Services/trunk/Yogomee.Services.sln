@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{BAE5A770-10E0-41FF-A2A2-1A3CBA188E35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{B6D70234-4A47-4802-9285-59C38EEDAB75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6308C5D4-77A0-45AC-BBC9-DB18283A92B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogomee.Services", "Yogomee.Services\Yogomee.Services.csproj", "{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogomee.Services.DomainModel", "Yogomee.Services.DomainModel\Yogomee.Services.DomainModel.csproj", "{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogomee.Services.DomainModel.Tests", "Yogomee.Services.DomainModel.Tests\Yogomee.Services.DomainModel.Tests.csproj", "{CE93902D-9678-42AC-8DBD-6E795A5AC976}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Genetibase", "Genetibase", "{8ECAEFF6-EA73-4F7C-9C3C-DB51067D5860}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{85383660-0508-4C56-BB29-DFAB11561565}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EBFDD1D0-080D-43E0-8679-377D9D8B862A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.DomainModel", "Genetibase.DomainModel\Genetibase.DomainModel.csproj", "{D2566ADF-19C9-4E5E-B903-12584139AF32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.ServiceModel", "Genetibase.ServiceModel\Genetibase.ServiceModel.csproj", "{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.DomainModel.Tests", "Genetibase.DomainModel.Tests\Genetibase.DomainModel.Tests.csproj", "{91AFF2B7-50E0-4F3C-AE31-55E88D394778}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19D2AC0F-82B3-408A-B2A9-DEBF70670C09}"
+	ProjectSection(SolutionItems) = preProject
+		Default.testrunconfig = Default.testrunconfig
+		TestList.vsmdi = TestList.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogomee.Services.Storage", "Yogomee.Services.Storage\Yogomee.Services.Storage.csproj", "{214DEBEF-0230-4509-A585-346BD2E94186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogomee.Services.Storage.Tests", "Yogomee.Services.Storage.Tests\Yogomee.Services.Storage.Tests.csproj", "{D0849ACD-570B-4BB2-B687-040FDFB1DA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogomee.Services.Tests", "Yogomee.Services.Tests\Yogomee.Services.Tests.csproj", "{EB997E40-48BB-4023-956A-141A7E4EF1AD}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TestList.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE93902D-9678-42AC-8DBD-6E795A5AC976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE93902D-9678-42AC-8DBD-6E795A5AC976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE93902D-9678-42AC-8DBD-6E795A5AC976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE93902D-9678-42AC-8DBD-6E795A5AC976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2566ADF-19C9-4E5E-B903-12584139AF32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2566ADF-19C9-4E5E-B903-12584139AF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2566ADF-19C9-4E5E-B903-12584139AF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2566ADF-19C9-4E5E-B903-12584139AF32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AFF2B7-50E0-4F3C-AE31-55E88D394778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AFF2B7-50E0-4F3C-AE31-55E88D394778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AFF2B7-50E0-4F3C-AE31-55E88D394778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AFF2B7-50E0-4F3C-AE31-55E88D394778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214DEBEF-0230-4509-A585-346BD2E94186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214DEBEF-0230-4509-A585-346BD2E94186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214DEBEF-0230-4509-A585-346BD2E94186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214DEBEF-0230-4509-A585-346BD2E94186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0849ACD-570B-4BB2-B687-040FDFB1DA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0849ACD-570B-4BB2-B687-040FDFB1DA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0849ACD-570B-4BB2-B687-040FDFB1DA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0849ACD-570B-4BB2-B687-040FDFB1DA08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB997E40-48BB-4023-956A-141A7E4EF1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB997E40-48BB-4023-956A-141A7E4EF1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB997E40-48BB-4023-956A-141A7E4EF1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB997E40-48BB-4023-956A-141A7E4EF1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6D70234-4A47-4802-9285-59C38EEDAB75} = {BAE5A770-10E0-41FF-A2A2-1A3CBA188E35}
+		{6308C5D4-77A0-45AC-BBC9-DB18283A92B4} = {BAE5A770-10E0-41FF-A2A2-1A3CBA188E35}
+		{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4} = {B6D70234-4A47-4802-9285-59C38EEDAB75}
+		{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2} = {B6D70234-4A47-4802-9285-59C38EEDAB75}
+		{214DEBEF-0230-4509-A585-346BD2E94186} = {B6D70234-4A47-4802-9285-59C38EEDAB75}
+		{CE93902D-9678-42AC-8DBD-6E795A5AC976} = {6308C5D4-77A0-45AC-BBC9-DB18283A92B4}
+		{D0849ACD-570B-4BB2-B687-040FDFB1DA08} = {6308C5D4-77A0-45AC-BBC9-DB18283A92B4}
+		{EB997E40-48BB-4023-956A-141A7E4EF1AD} = {6308C5D4-77A0-45AC-BBC9-DB18283A92B4}
+		{85383660-0508-4C56-BB29-DFAB11561565} = {8ECAEFF6-EA73-4F7C-9C3C-DB51067D5860}
+		{EBFDD1D0-080D-43E0-8679-377D9D8B862A} = {8ECAEFF6-EA73-4F7C-9C3C-DB51067D5860}
+		{D2566ADF-19C9-4E5E-B903-12584139AF32} = {85383660-0508-4C56-BB29-DFAB11561565}
+		{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE} = {85383660-0508-4C56-BB29-DFAB11561565}
+		{91AFF2B7-50E0-4F3C-AE31-55E88D394778} = {EBFDD1D0-080D-43E0-8679-377D9D8B862A}
+	EndGlobalSection
+EndGlobal

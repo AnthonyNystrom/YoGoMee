@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <string-array name="gomee_types">
+        <item>Text</item>
+        <item>Capture Image</item>
+        <item>Select Image</item>
+        <item>Select video</item>
+        <item>Graffiti</item>
+        <item>Files</item>
+        <item>Wall</item>
+        <item>Link Web</item>
+    </string-array>
+<array name="imageEnds">
+        <item>.png</item>
+        <item>.gif</item>
+        <item>.jpg</item>
+        <item>.jpeg</item>
+        <item>.bmp</item>
+    </array>
+<array name="audioEnds">
+        <item>.mp3</item>
+        <item>.wav</item>
+        <item>.ogg</item>
+        <item>.midi</item>
+    </array>
+<array name="packageEnds">
+        <item>.jar</item>
+        <item>.zip</item>
+        <item>.rar</item>
+        <item>.gz</item>
+    </array>
+<array name="textEnds">
+		<item>.txt</item>
+        <item>.htm</item>
+        <item>.html</item>
+        <item>.php</item>
+        <item>.m</item>       
+</array>
+</resources>

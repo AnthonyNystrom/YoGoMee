@@ -1,0 +1,21 @@
+<yogomeeapplication>
+  <globals>
+    <declare name="Url" type="string"/>
+    <declare name="TwitterUserName" type="string"/>
+    <declare name="TwitterPassword" type="string"/>
+    <declare name="ReturnText" type="string"/>
+    <declare name="TwitterStatus" type="string"/>
+    <declare name="MyXmlDoc" type="XmlDocument"/>
+    <declare name="MyXmlNode" type="XmlNode"/>
+  </globals>
+  <main>
+    <set name="TwitterUserName" value="eisernWolf@gmail.com"/>
+    <set name="TwitterPassword" value="1323ae"/>
+    <set name="Url" value="http://twitter.com/statuses/update.xml"/>
+    <set name="TwitterStatus" value="I am calling this from YGML from location Long:{Longitude} / Lat {Latitude}"/>
+    <webpost url="{Url}" outputformat="xml" outputvar="MyXmlDoc" username="{TwitterUserName}" password="{TwitterPassword}" data="{TwitterStatus}"/>
+    <xmlnode xmldocument="MyXmlDoc" nodename="description" outputvar="MyXmlNode" />
+    <xmlinnertext xmlnode="MyXmlNode" outputvar="ReturnText" />
+    <action type="image" imageurl="http://farm4.static.flickr.com/3178/3107386828_498535cab7_m.jpg"/>
+  </main>
+</yogomeeapplication>

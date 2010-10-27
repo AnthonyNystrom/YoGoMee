@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{4E501C86-27D9-4C04-9B3E-A66B278DC178}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{DE877EE4-6A59-410C-932C-181664EC6DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestService", "GetMyFriends\Main\Source\RestService\RestService.csproj", "{A56AAC8F-CA25-45E2-A7B6-F5C7F5CEB3E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Genetibase", "Genetibase", "{FF626A33-479D-4BA4-B205-607C0D9FA091}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{05E15D0D-AC86-4869-A7A8-C4E239035422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genetibase.ServiceModel", "GetMyFriends\Genetibase\Source\Genetibase.ServiceModel\Genetibase.ServiceModel.csproj", "{F73A6AEA-17E3-4BA0-A1E3-119D68C2856F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A56AAC8F-CA25-45E2-A7B6-F5C7F5CEB3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56AAC8F-CA25-45E2-A7B6-F5C7F5CEB3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56AAC8F-CA25-45E2-A7B6-F5C7F5CEB3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56AAC8F-CA25-45E2-A7B6-F5C7F5CEB3E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73A6AEA-17E3-4BA0-A1E3-119D68C2856F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73A6AEA-17E3-4BA0-A1E3-119D68C2856F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73A6AEA-17E3-4BA0-A1E3-119D68C2856F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73A6AEA-17E3-4BA0-A1E3-119D68C2856F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE877EE4-6A59-410C-932C-181664EC6DE3} = {4E501C86-27D9-4C04-9B3E-A66B278DC178}
+		{A56AAC8F-CA25-45E2-A7B6-F5C7F5CEB3E5} = {DE877EE4-6A59-410C-932C-181664EC6DE3}
+		{05E15D0D-AC86-4869-A7A8-C4E239035422} = {FF626A33-479D-4BA4-B205-607C0D9FA091}
+		{F73A6AEA-17E3-4BA0-A1E3-119D68C2856F} = {05E15D0D-AC86-4869-A7A8-C4E239035422}
+	EndGlobalSection
+EndGlobal

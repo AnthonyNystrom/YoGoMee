@@ -1,0 +1,70 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="yoGomee.Main" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<link rel="stylesheet" type="text/css" href="/css/mainstyles.css?v=0" />
+	<script type="text/javascript"src="/js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript" src="/js/BlockUI.js"></script>	
+	
+	 <asp:ContentPlaceHolder ID="Head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form runat="server">
+<script type="text/javascript">
+
+
+
+function install(widgetid){
+   yoGomee.Main.InstallWidget(widgetid, install_Callback)
+}
+
+function install_Callback(response,request){
+        if(response.error==null){
+            alert('successfully installed');
+            location.href=location.href;
+        }
+}
+
+function uninstall(installedwidgetid){
+   yoGomee.Main.UninstallWidget(installedwidgetid, uninstall_Callback)
+}
+
+function uninstall_Callback(response,request){
+        if(response.error==null){
+            alert('successfully uninstalled');
+            location.href=location.href;
+        }
+}
+
+function disable(installedwidgetid,enable){
+   yoGomee.Main.DisableInstalledWidget(installedwidgetid,enable, disable_Callback)
+}
+
+function disable_Callback(response,request){
+        if(response.error==null){
+            alert('successfully disabled');
+            location.href=location.href;
+        }
+}
+</script>
+        <%if (IsLoggedIn) { %>
+            <asp:Button ID="btnNewWidget" runat="server" Text="New Widget" onclick="btnNewWidget_Click" />  
+            <asp:Button ID="btnMyWidgets" runat="server" Text="My Widgets" onclick="btnMyWidgets_Click"/>  
+            <asp:Button ID="btnWidgetStore" runat="server" Text="Widget Store" onclick="btnWidgetStore_Click" /> 
+            <br />
+            <br />
+        <%} %>
+        
+    <asp:ContentPlaceHolder ID="MainSection" runat="server">
+
+        
+    </asp:ContentPlaceHolder>
+
+
+</form>
+
+</body>
+</html>

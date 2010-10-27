@@ -1,0 +1,197 @@
+/* CSS file */
+@font-face
+{
+	fontFamily: "HelveticaNeue LT 95 Black";
+	fontWeight: normal;
+	fontStyle: normal;
+	src: local("HelveticaNeue LT 95 Black");
+}
+@font-face
+{
+	fontFamily: "HelveticaNeue LT 95 Black";
+	fontWeight: bold;
+	fontStyle: normal;
+	src: local("HelveticaNeue LT 95 Black");
+}
+global
+{
+	backgroundGradientAlphas: 1.0, 1.0;
+	backgroundGradientColors: #FFFFFF, #FFFFFF;
+	fontFamily: Arial;
+	color: #FFFFFF;
+	paddingLeft: 0;
+	paddingTop: 0;
+	paddingRight: 0;
+	paddingBottom: 0;
+	backgroundAlpha: 1.0;
+}
+Button.search
+{
+	upSkin: Embed(source="resources/btn_search.png");
+	overSkin: Embed(source="resources/btn_search.png");
+	downSkin: Embed(source="resources/btn_search.png");
+	disabledSkin: Embed(source="resources/btn_search.png");
+	selectedUpSkin: Embed(source="resources/btn_search.png");
+	selectedOverSkin: Embed(source="resources/btn_search.png");
+	selectedDownSkin: Embed(source="resources/btn_search.png");
+	selectedDisabledSkin: Embed(source="resources/btn_search.png");
+}
+TextInput.search
+{
+	borderStyle: none;
+	borderSkin: Embed(source="resources/search_input.png",scaleGridRight="327",scaleGridLeft="1",scaleGridTop="1",scaleGridBottom="24");
+	fontSize: 15;
+	color: #CC0001;
+	fontWeight: bold;
+	paddingLeft: 5;
+	paddingBottom: 0;
+	paddingTop: 3;
+	borderThickness: 0;
+}
+Text.YoEntryTitle
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #333333;
+}
+Text.CaptionLabel
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #333333;
+	text-align: right;
+}
+TextInput.YoEntryTitle
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #333333;
+	border-style: solid;
+}
+TextInput.YoEntryTitleDirty
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #7f0000;
+	border-style: solid;
+}
+
+Text.YoEntryAddress
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+}
+Text.AddressLabel
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	text-align: right;
+}
+TextInput.YoEntryAddress
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+TextInput.YoEntryAddressDirty
+{
+	fontSize: 10;
+	color: #7f0000;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+Text.YoEntryContent
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+}
+Text.DescriptionLabel
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	text-align: right;
+}
+TextArea.YoEntryContent
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+TextArea.YoEntryContentDirty
+{
+	fontSize: 10;
+	color: #7f0000;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+Text.YoEntryRemove
+{
+	color: #333333;
+	textDecoration: underline;
+	fontFamily: Verdana;
+}
+Text.YoEntryEdit
+{
+	color: #333333;
+	textDecoration: underline;
+	fontFamily: Verdana;
+}
+Text.country
+{
+	fontSize: 12;
+	fontWeight: bold;
+	textDecoration: normal;
+	fontFamily: Arial;
+}
+YoButton
+{
+	cornerRadius: 1;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	disabledColor: #FFFFFF;
+	borderColor: #666666;
+	themeColor: #666666;
+	fontStyle: normal;
+	fontWeight: normal;
+	backgroundAlpha: 1.0;
+	fillAlphas: 0.0, 0.0, 0.0, 0.0;
+	fillColors: #FFFFFF, #FFFFFF;
+	upSkin: Embed(source="resources/btn_black.png");
+	overSkin: Embed(source="resources/btn_black.png");
+	downSkin: Embed(source="resources/btn_black.png");
+	disabledSkin: Embed(source="resources/btn_black.png");
+	selectedUpSkin: Embed(source="resources/btn_red.png");
+	selectedOverSkin: Embed(source="resources/btn_red.png");
+	selectedDownSkin: Embed(source="resources/btn_red.png");
+	selectedDisabledSkin: Embed(source="resources/btn_red.png");
+	paddingTop: 0;
+	paddingBottom: 6;
+	fontSize: 12;
+	fontFamily: "HelveticaNeue LT 95 Black";
+}
+YoEntry
+{
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	horizontal-gap: 5;
+	vertical-gap: 0;
+	border-color: #666666;
+}
+YoEntryList
+{
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	horizontal-gap: 0;
+	vertical-gap: 10;
+	border-color: #666666;
+}

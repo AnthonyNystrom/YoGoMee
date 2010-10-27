@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Yogomee.Services.DomainModel"
+                   namespace="Yogomee.Services.DomainModel.Entities">
+
+  <class name="Friend" table="Friend" lazy="true" optimistic-lock="version">
+
+    <id name="Id" column="FriendId">
+      <generator class="identity"/>
+    </id>
+
+    <version name="Version" column="Version"/>
+
+    <many-to-one name="Member1" class="Member" column="MemberId1" not-null="true"/>
+    <many-to-one name="Member2" class="Member" column="MemberId2" not-null="true"/>
+
+    <property name="Created" column="DTCreated" not-null="true"/>
+  </class>
+
+</hibernate-mapping>

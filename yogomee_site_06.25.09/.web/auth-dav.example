@@ -1,0 +1,11 @@
+# htdigest file for authenticating webdav users
+#
+# Usage: htdigest [-c] passwordfile realm username
+# The -c flag creates a new file.
+#
+# ie 
+# /usr/bin/htdigest -c /home/username/.web/auth-dav webdav username
+#
+# would create the entry
+# username:webdav:6b52ce4fa3ffcd51945cdec206877a68
+#

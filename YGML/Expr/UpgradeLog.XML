@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Expr">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Admin\Desktop\Expr\Expr.sln">
+</Property><Property Name="Date" Value="Tuesday, December 16, 2008">
+</Property><Property Name="Time" Value="23:43:56 PM">
+</Property></Properties><Event ErrorLevel="0" Project="Expr" Source="Expr.csproj" Description="Project file successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Expr.csproj">
+</Event><Event ErrorLevel="0" Project="Expr" Source="BinaryOp.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\BinaryOp.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="BinaryOps.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\BinaryOps.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ConditionalOp.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ConditionalOp.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Constant.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Constant.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="BinaryHelper.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\BinaryHelper.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ConvertHelper.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ConvertHelper.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ErrorFormator.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ErrorFormator.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="EvalException.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\EvalException.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Evaluator.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Evaluator.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="IExecutor.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\IExecutor.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="OperatorPriority.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\OperatorPriority.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Parameter.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Parameter.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ParameterVariableHolder.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ParameterVariableHolder.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="MemberId.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\MemberId.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Error.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Error.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expression.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Expression.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ParserException.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ParserException.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ScannerException.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ScannerException.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Parser.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Parser.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Scanner.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Scanner.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Operand.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Operand.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Operator.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Operator.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="SR.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\SR.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="StringToken.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\StringToken.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Token.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Token.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Tree.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Tree.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Identifier.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Identifier.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="IndexerOp.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\IndexerOp.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="MemberOp.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\MemberOp.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Context.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Context.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="UnaryOp.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\UnaryOp.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Variable.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Variable.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Executor.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Executor.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="ExecutorContext.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\ExecutorContext.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Executors.cs" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\Executors.cs">
+</Event><Event ErrorLevel="0" Project="Expr" Source="SR.resx" Description="File successfully backed up as C:\Documents and Settings\Admin\Desktop\Expr\Backup\SR.resx">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Expr" Source="Expr.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

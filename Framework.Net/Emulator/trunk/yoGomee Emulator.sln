@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yoGomee Emulator", "yoGomee Emulator.csproj", "{2B245898-CBF8-4DD6-B9F9-D7FA085B7E3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yoGomee.Data", "..\..\..\YoGoMee_Data\trunk\YoGoMee_Data\yoGomee.Data.csproj", "{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YGML Interpreter", "..\..\..\YGML\trunk\YGML\YGML Interpreter.csproj", "{B6706DF8-2BEB-44E1-903D-E3AE34FA2916}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B245898-CBF8-4DD6-B9F9-D7FA085B7E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B245898-CBF8-4DD6-B9F9-D7FA085B7E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B245898-CBF8-4DD6-B9F9-D7FA085B7E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B245898-CBF8-4DD6-B9F9-D7FA085B7E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6706DF8-2BEB-44E1-903D-E3AE34FA2916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6706DF8-2BEB-44E1-903D-E3AE34FA2916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6706DF8-2BEB-44E1-903D-E3AE34FA2916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6706DF8-2BEB-44E1-903D-E3AE34FA2916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

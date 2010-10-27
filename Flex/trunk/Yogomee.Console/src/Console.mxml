@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:maps="com.google.maps.*"
+	xmlns:controls="controls.*"
+	xmlns:yomap="controls.map.*"
+	backgroundGradientAlphas="[1.0, 1.0]" backgroundGradientColors="[#6EC5CA, #6EC5CA]" xmlns:ns1="*" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0" xmlns:list="controls.list.*" xmlns:ns2="controls.text.*" xmlns:ns3="com.adobe.flex.extras.controls.*" layout="absolute" verticalGap="0">
+
+	<mx:Style source="styles.css"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.events.ResizeEvent;
+			import mx.events.EffectEvent;
+			import mx.effects.Resize;
+			import mx.effects.Move;
+			import mx.effects.Parallel;
+			import mx.events.ChildExistenceChangedEvent;
+			import domainModel.utils.GoogleSearchService;
+			import controls.map.marker.YoMarker;
+			import domainModel.entities.Profile;
+			import domainModel.utils.YoService;
+			import domainModel.IUnitOfWork;
+			import domainModel.UnitOfWork;
+			import domainModel.entities.User;
+			import domainModel.repositories.UserRepository;
+			import flash.utils.getTimer;
+			import domainModel.values.GomeeSource;
+			import domainModel.values.GomeeType;
+			import domainModel.entities.Gomee;
+			import domainModel.repositories.GomeeRepository;
+			import domainModel.repositories.IGomeeRepository;
+			import mx.automation.codec.KeyCodePropertyCodec;
+			import com.google.maps.InfoWindowOptions;
+			import com.google.maps.MapMouseEvent;
+			import mx.core.UIComponent;
+			import com.google.maps.overlays.MarkerOptions;
+			import com.google.maps.LatLngBounds;
+			import com.google.maps.overlays.Marker;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.HTTPService;
+			import com.google.maps.controls.ZoomControlOptions;
+			import mx.messaging.AbstractConsumer;
+			import com.google.maps.controls.MapTypeControl;
+			import com.google.maps.controls.PositionControl;
+			import com.google.maps.controls.ZoomControl;
+			import flash.events.Event;
+			import com.google.maps.LatLng;
+			import com.google.maps.Map;
+			import com.google.maps.MapEvent;
+			import com.google.maps.MapType;
+			import com.adobe.serialization.json.*;	
+			
+			import defer.*;
+			
+			private var service:YoService;
+			private var uow:IUnitOfWork;
+			private var _mapExpanded:Boolean;
+			private var _mapRect:Rectangle;
+			
+			protected override function initializationComplete():void
+			{
+				super.initializationComplete();
+				Security.loadPolicyFile("xmlsocket://" + Application.application.parameters.serviceUrl + ":8081");
+				
+				service = new YoService(
+					Application.application.parameters.serviceUrl,
+					Application.application.parameters.baseString,
+					Application.application.parameters.user,
+					Application.application.parameters.secret);
+				
+				_map.key = Application.application.parameters.mapKey;
+				_map.gomeeId = Application.application.parameters.gomee;
+				
+				uow = new UnitOfWork(service);
+				_map.uow = uow;
+				
+				_signInForm.addEventListener(
+					Event.CONNECT,
+					function(event:Event):void
+					{
+						_guestAction.visible = false;
+						_userName.text = _signInForm.uow.service.login;
+						_userAction.visible = true;
+						_map.uow = _signInForm.uow;
+					});
+					
+				_signUpForm.addEventListener(
+					Event.CONNECT,
+					function(event:Event):void
+					{
+						_guestAction.visible = false;
+						_userName.text = _signUpForm.uow.service.login;
+						_userAction.visible = true;
+						_map.uow = _signUpForm.uow;
+					});
+				
+				_mapBox.x = 55;
+				_mapBox.y = 165;
+				//_mapBox.width = width - 110;
+				//_mapBox.height = height - 210;
+					
+				_map.addEventListener(
+					"expandClicked",
+					function(event:Event):void
+					{
+						var p:Parallel = new Parallel();
+						var m:Move = new Move(_mapBox);
+						var r:Resize = new Resize(_mapBox);
+						p.addChild(m);
+						p.addChild(r);
+						
+						if(!_mapExpanded)
+						{
+							_mapExpanded = true;
+							m.xTo = 0;
+							m.yTo = 0;
+							r.widthTo = width;
+							r.heightTo = height;	
+						}
+						else
+						{
+							_mapExpanded = false;
+							m.xTo = 55;
+							m.yTo = 165;
+							r.widthTo = width - 110;
+							r.heightTo = height - 210;
+						}
+						
+						p.addEventListener(
+							EffectEvent.EFFECT_END,
+							function(event:*):void
+							{
+								_map.noUpdate(false);
+							});
+						
+						_map.noUpdate(true);
+						p.play();
+					});
+			}
+			
+			private function searchKeyDownHandler(event:KeyboardEvent):void
+			{
+				if(event.keyCode == Keyboard.ENTER)
+				{
+					search();
+				}
+			}
+			
+			private function onSearchClick(event:Event):void
+			{
+				search();
+			}
+			
+			private function search():void
+			{
+				_map.searchQuery = _searchText.text;	
+			}
+			
+			private function onSignInClick(event:Event):void
+			{
+				_signInForm.visible = true;
+			}
+			
+			private function onSignOutClick(event:Event):void
+			{
+				_userAction.visible = false;
+				_userName.text = null;
+				_guestAction.visible = true;
+				_map.uow = uow;
+			}
+			
+			private function onSignUpClick(event:Event):void
+			{
+				_signUpForm.visible = true;
+			}
+			
+		]]>
+	</mx:Script>
+	<mx:Canvas width="100%" height="100%" x="0" y="0">
+	
+		<mx:Canvas left="0" right="0" top="0" height="30" id="_userBox">
+			<mx:Canvas width="191" top="0" bottom="0" right="50" id="_guestAction">
+				<mx:Text text="sign in" click="onSignInClick(event)" textAlign="center" fontSize="12" textDecoration="normal" fontWeight="bold" color="#CC0001" buttonMode="true" mouseChildren="false" useHandCursor="true" left="0" verticalCenter="0" styleName="HelveticaRoman"/>
+				<mx:Text text="or" fontSize="12" fontWeight="bold" x="45" verticalCenter="0" styleName="HelveticaRoman"/>
+				<mx:Text text="create a new account" click="onSignUpClick(event)" textAlign="center" fontSize="12" textDecoration="normal" fontWeight="bold" color="#CC0001" buttonMode="true" mouseChildren="false" useHandCursor="true" right="0" verticalCenter="0" styleName="HelveticaRoman"/>
+			</mx:Canvas>
+			<mx:HBox top="0" bottom="0" horizontalAlign="left" verticalAlign="middle" id="_userAction" right="50" visible="false" horizontalGap="6">
+				<mx:Text fontSize="12" fontWeight="bold" id="_userName" styleName="HelveticaRoman"/>
+				<mx:Text click="onSignOutClick(event)" textAlign="center" fontSize="12" fontWeight="bold" color="#CC0001" buttonMode="true" mouseChildren="false" useHandCursor="true" styleName="HelveticaRoman" text="sign out"/>
+			</mx:HBox>
+		</mx:Canvas>
+		<mx:HBox id="_aboutBox" left="50" right="50" bottom="10">
+			<mx:HBox>
+				<mx:Text text="© 2009 yoGomee" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+			</mx:HBox>
+			<mx:HBox width="100%" horizontalAlign="right">
+				<mx:Text text="About" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text text="Advertising" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text text="Developers" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text text="Terms" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text text="Find Friends" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text text="Privacy" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text text="Help" color="#2E5456" fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+			</mx:HBox>	
+		</mx:HBox>
+		<mx:HBox horizontalGap="5" borderStyle="solid" borderThickness="5" dropShadowEnabled="false" shadowDirection="right" borderColor="#ffffff" backgroundAlpha="1.0" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0" backgroundColor="#FFFFFF" left="50" right="50" bottom="40" top="160">
+		</mx:HBox>
+		<mx:HBox verticalAlign="middle" id="_searchBox" top="30" left="50" right="50">
+			<mx:Image source="resources/logo.png"/>
+			<mx:Canvas width="100%" height="100%">
+				<mx:TextInput id="_searchText" y="37" width="353" height="25" left="10" styleName="search"/>
+				<mx:Text x="8" y="67" text="find businesses, addresses and places of interest." fontSize="11" fontWeight="bold" styleName="HelveticaRoman"/>
+				<mx:Text x="297" y="67" text="learn more" textAlign="center" fontSize="11" textDecoration="normal" fontWeight="bold" color="#CC0001" styleName="HelveticaRoman"/>
+				<mx:Button x="377" y="31" styleName="search" useHandCursor="true" buttonMode="true" click="onSearchClick(event)"/>
+			</mx:Canvas>
+		</mx:HBox>
+		
+		<mx:VBox id="_mapBox" clipContent="true" width="{width - 110}" height="{height - 210}">
+			<yomap:YoMap id="_map" height="100%" width="100%">
+			</yomap:YoMap>	
+		</mx:VBox>
+		
+		
+	</mx:Canvas>
+	<ns1:SignIn id="_signInForm" x="0" y="0" width="100%" height="100%" visible="false">
+	</ns1:SignIn>
+	<ns1:SignUp id="_signUpForm" x="0" y="0" width="100%" height="100%" visible="false">
+	</ns1:SignUp>
+	
+</mx:Application>

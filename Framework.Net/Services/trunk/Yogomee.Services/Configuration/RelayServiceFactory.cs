@@ -1,0 +1,30 @@
+﻿/* ------------------------------------------------
+ * RelayServiceFactory.cs
+ * Copyright © 2009 Alex Nesterov
+ * mailto:a.nesterov@genetibase.com
+ * ---------------------------------------------- */
+
+using System;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Dispatcher;
+
+namespace Yogomee.Services.Configuration
+{
+    public class RelayServiceFactory : IInstanceProvider
+    {
+        public Object GetInstance(InstanceContext instanceContext, Message message)
+        {
+            return GetInstance(instanceContext);
+        }
+
+        public Object GetInstance(System.ServiceModel.InstanceContext instanceContext)
+        {
+            return new RelayService();
+        }
+
+        public void ReleaseInstance(System.ServiceModel.InstanceContext instanceContext, Object instance)
+        {
+        }
+    }
+}

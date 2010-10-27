@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="850" height="650" backgroundColor="#000000" backgroundAlpha="0.8" xmlns:ns1="controls.spinner.*">
+
+	<mx:Script>
+		<![CDATA[
+			import com.adobe.utils.StringUtil;
+			import defer.Failure;
+			import domainModel.entities.User;
+			import mx.core.Application;
+			import domainModel.UnitOfWork;
+			import domainModel.utils.YoService;
+			
+			private var _rootService:YoService;
+			private var _rootUow:UnitOfWork;
+			
+			protected override function initializationComplete():void
+			{
+				_rootService = new YoService(
+					Application.application.parameters.serviceUrl,
+					Application.application.parameters.baseString,
+					"root",
+					"root");
+					
+				_rootUow = new UnitOfWork(_rootService);
+				
+				//_loginText.addEventListener(Event.CHANGE, check);
+				//_passwordText.addEventListener(Event.CHANGE, check);
+				//_passwordText2.addEventListener(Event.CHANGE, check);
+			}
+			
+			private function check(...args):Boolean
+			{
+				if(_loginText.text == null || _loginText.text == "")
+				{
+					_statusText2.text = "Hey, you forgot something! Username can't be blank, try again.";
+					return false;
+				}
+				
+				if(_passwordText.text == null || _passwordText.text == "")
+				{
+					_statusText2.text = "Hey, you forgot something! Username can't be blank, try again.";
+					return false;
+				}
+				
+				if(_passwordText.text != _passwordText2.text)
+				{
+					_statusText2.text = "Passwords do not match, try again.";
+					return false;
+				}
+				
+				_statusText2.text = null;
+				return true;
+			}
+			
+			private var _service:YoService;
+			
+			public function get service():YoService
+			{
+				return _service;
+			}
+			
+			private var _uow:UnitOfWork;
+			
+			public function get uow():UnitOfWork
+			{
+				return _uow;
+			}
+			
+			private function onCloseClick(event:Event):void
+			{
+				this.visible = false;
+			}
+			
+			private function onGoClick(event:Event):void
+			{
+				if(!check(null))
+				{
+					return;
+				}
+				
+				_topBox.visible = false;
+				_spinner.visible = true;
+				_spinner.play();
+				_statusText.text = "creating new account";
+				_statusText.visible = true;
+				
+				var user:User = new User();
+				user.login = _loginText.text;
+				user.secret = _passwordText.text;
+				
+				_rootUow.userRepository.addUser(user)
+					.addCallback(
+						function(user:User):void
+						{
+							_statusText.text = "connecting";
+							
+							_service = new YoService(
+								Application.application.parameters.serviceUrl,
+								Application.application.parameters.baseString,
+								user.login,
+								user.secret);
+					
+							_uow = new UnitOfWork(_service);
+							
+							_uow.userRepository.getMe()
+								.addCallback(
+									function(me:User):void
+									{
+										_spinner.stop();
+										_statusText.text = null;
+										_statusText.visible = false;
+										_loginText.text = null;
+										_passwordText.text = null;
+										_passwordText2.text = null;
+										_topBox.visible = true;
+										visible = false;
+							
+										dispatchEvent(new Event(Event.CONNECT));
+									})
+								.addErrback(
+									function(fail:Failure):void
+									{
+										_statusText.text = "Oops! Something is wrong. Please try again later.";
+							
+										var timer:Timer = new Timer(2000, 1);
+							
+										timer.addEventListener(
+											TimerEvent.TIMER,
+											function(event:TimerEvent):void
+											{
+												_spinner.stop();
+												_statusText.text = null;
+												_statusText.visible = false;
+												_loginText.text = null;
+												_passwordText.text = null;
+												_passwordText2.text = null;
+												_topBox.visible = true;
+												visible = false;
+											});
+							
+										timer.start();
+									});
+						})
+					.addErrback(
+						function(fail:Failure):void
+						{
+							_statusText.text = "Oops! Something is wrong. Please try again later.";
+							var s:String = fail.value as String; 
+							
+							var timer:Timer = new Timer(3000, 1);
+							
+							if(StringUtil.beginsWith(fail.value, "User already exists"))
+							{
+								_statusText.text = "Oops! User already exists. Try another name, please.";
+								_spinner.stop();
+								_spinner.visible = false;
+								
+								timer.addEventListener(
+									TimerEvent.TIMER,
+									function(event:TimerEvent):void
+									{
+										_statusText.text = null;
+										_statusText.visible = false;
+										_loginText.text = null;
+										_topBox.visible = true;
+										_loginText.setFocus();
+									});
+							
+								timer.start();
+							}
+							else
+							{
+								timer.addEventListener(
+									TimerEvent.TIMER,
+									function(event:TimerEvent):void
+									{
+										_spinner.stop();
+										_statusText.text = null;
+										_statusText.visible = false;
+										_loginText.text = null;
+										_passwordText.text = null;
+										_passwordText2.text = null;
+										_topBox.visible = true;
+										visible = false;
+									});
+							
+									timer.start();
+							}
+						});
+				}
+			
+		]]>
+	</mx:Script>
+
+	<mx:VBox id="_topBox" horizontalCenter="0" verticalCenter="0" backgroundColor="#FFFFFF" borderStyle="solid" cornerRadius="10" borderThickness="0" label="Sign in" backgroundAlpha="0.0" paddingTop="20" paddingBottom="20" paddingLeft="20" paddingRight="20" alpha="1.0" borderColor="#FFFFFF" verticalGap="15">
+		<mx:HBox width="100%">
+			<mx:Text text="Sign Up" alpha="1.0" fontSize="22" fontWeight="normal" letterSpacing="2" selectable="false" styleName="HelveticaRoman"/>
+			<mx:HBox width="100%" horizontalAlign="right" height="100%" verticalAlign="middle">
+				<mx:HBox horizontalAlign="center" verticalAlign="middle" borderStyle="solid" borderColor="#FFFFFF" borderThickness="1" horizontalGap="0" paddingLeft="3" paddingRight="3" paddingTop="0.8">
+					<mx:Text text="x" click="onCloseClick(event)" fontSize="14" textAlign="center" buttonMode="true" mouseChildren="false" useHandCursor="true" styleName="HelveticaRoman" fontWeight="bold"/>
+				</mx:HBox>
+			</mx:HBox>
+		</mx:HBox>
+		<mx:VBox width="100%" verticalGap="15">
+			<mx:HBox width="100%">
+				<mx:VBox verticalAlign="middle" verticalGap="3" width="100%">
+					<mx:Text text="Username" fontWeight="bold" color="#FFFFFF" alpha="1.0" fontSize="12" letterSpacing="2" styleName="HelveticaRoman"/>
+					<mx:TextInput id="_loginText" width="263" styleName="search" color="#333333"/>
+				</mx:VBox>
+			</mx:HBox>
+			<mx:VBox width="100%" verticalGap="3">
+				<mx:Text text="Password" fontWeight="bold" color="#FFFFFF" alpha="1.0" fontSize="12" letterSpacing="2" styleName="HelveticaRoman"/>
+				<mx:TextInput id="_passwordText" width="100%" styleName="search" displayAsPassword="true" color="#333333"/>
+			</mx:VBox>
+			<mx:VBox width="100%" verticalGap="3">
+				<mx:Text text="Retype password" fontWeight="bold" color="#FFFFFF" alpha="1.0" fontSize="12" letterSpacing="2" styleName="HelveticaRoman"/>
+				<mx:TextInput id="_passwordText2" width="100%" styleName="search" displayAsPassword="true" color="#333333"/>
+			</mx:VBox>
+			<mx:HBox width="100%" horizontalAlign="right" paddingTop="10">
+				<mx:Button useHandCursor="true" buttonMode="true" label="go" click="onGoClick(event)" width="70" height="30" styleName="Go" paddingTop="0" letterSpacing="1.5" fontSize="19" fontWeight="normal" cornerRadius="5" color="#CC0001"/>
+			</mx:HBox>
+		</mx:VBox>
+	</mx:VBox>
+	
+	<ns1:Spinner id="_spinner" verticalCenter="0" horizontalCenter="0" tickColor="0xffffff" size="30"
+		numTicks="12" tickWidth="3" speed="1000" fadeSpeed="600" autoPlay="false" visible="false"/>
+	<mx:Text id="_statusText" visible="false" text="" fontWeight="normal" color="#FFFFFF" alpha="1.0" fontSize="12" letterSpacing="2" verticalCenter="35" horizontalCenter="0" styleName="HelveticaRoman"/>
+	<mx:Text id="_statusText2" fontWeight="normal" color="#CC0001" alpha="1.0" fontSize="12" letterSpacing="2" verticalCenter="161" horizontalCenter="0" styleName="HelveticaRoman"/>
+</mx:Canvas>

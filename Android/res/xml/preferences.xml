@@ -1,0 +1,8 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/access" android:key="@string/access"><EditTextPreference android:title="@string/username" android:key="@string/username"></EditTextPreference><EditTextPreference android:title="@string/password" android:key="@string/password"></EditTextPreference>
+	<CheckBoxPreference android:key="@string/remember" android:title="@string/remember"></CheckBoxPreference></PreferenceCategory>
+	<PreferenceCategory android:key="@string/proximity" android:title="@string/proximity"><EditTextPreference android:title="@string/proximity_radius" android:key="@string/proximity_radius"></EditTextPreference><RingtonePreference android:showDefault="true" android:showSilent="true" android:ringtoneType="notification|alarm" android:title="@string/ringtone_alert" android:key="@string/ringtone_alert"/>
+</PreferenceCategory>
+
+</PreferenceScreen>

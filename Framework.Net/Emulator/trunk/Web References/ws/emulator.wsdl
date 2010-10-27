@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RunApplication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunApplicationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunApplicationResult" type="tns:ExecutionResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExecutionResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorLineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DebugText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="YogoAction" type="tns:YogoAction" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="YogoAction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ActionType" type="tns:ActionType" />
+          <s:element minOccurs="0" maxOccurs="1" name="TextToDisplay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SmsToSend" type="tns:Sms" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlToNavigateTo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ActionType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="Image" />
+          <s:enumeration value="Sms" />
+          <s:enumeration value="SoundPlay" />
+          <s:enumeration value="SoundRecord" />
+          <s:enumeration value="VideoPlay" />
+          <s:enumeration value="VideoRecord" />
+          <s:enumeration value="Photo" />
+          <s:enumeration value="Call" />
+          <s:enumeration value="Browser" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Sms" />
+      <s:element name="GetApplicationList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetApplicationListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApplicationListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RunApplicationSoapIn">
+    <wsdl:part name="parameters" element="tns:RunApplication" />
+  </wsdl:message>
+  <wsdl:message name="RunApplicationSoapOut">
+    <wsdl:part name="parameters" element="tns:RunApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApplicationList" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApplicationListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EmulatorSoap">
+    <wsdl:operation name="RunApplication">
+      <wsdl:input message="tns:RunApplicationSoapIn" />
+      <wsdl:output message="tns:RunApplicationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <wsdl:input message="tns:GetApplicationListSoapIn" />
+      <wsdl:output message="tns:GetApplicationListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmulatorSoap" type="tns:EmulatorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunApplication">
+      <soap:operation soapAction="http://tempuri.org/RunApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <soap:operation soapAction="http://tempuri.org/GetApplicationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EmulatorSoap12" type="tns:EmulatorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunApplication">
+      <soap12:operation soapAction="http://tempuri.org/RunApplication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <soap12:operation soapAction="http://tempuri.org/GetApplicationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Emulator">
+    <wsdl:port name="EmulatorSoap" binding="tns:EmulatorSoap">
+      <soap:address location="http://72.167.29.167:88/emulator.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EmulatorSoap12" binding="tns:EmulatorSoap12">
+      <soap12:address location="http://72.167.29.167:88/emulator.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

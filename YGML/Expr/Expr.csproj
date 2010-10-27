@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B6820A4-A5EE-4ADA-BF47-E2EA5A68CA19}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jyc.Expr</RootNamespace>
+    <AssemblyName>Jyc.Expr</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinaryOp.cs" />
+    <Compile Include="BinaryOps.cs" />
+    <Compile Include="ConditionalOp.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="BinaryHelper.cs" />
+    <Compile Include="ConvertHelper.cs" />
+    <Compile Include="ErrorFormator.cs" />
+    <Compile Include="EvalException.cs" />
+    <Compile Include="Evaluator.cs" />
+    <Compile Include="IExecutor.cs" />
+    <Compile Include="OperatorPriority.cs" />
+    <Compile Include="Parameter.cs" />
+    <Compile Include="ParameterVariableHolder.cs" />
+    <Compile Include="MemberId.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="ParserException.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ScannerException.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="Operand.cs" />
+    <Compile Include="Operator.cs" />
+    <Compile Include="SR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StringToken.cs" />
+    <Compile Include="Token.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="Identifier.cs" />
+    <Compile Include="IndexerOp.cs" />
+    <Compile Include="MemberOp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="UnaryOp.cs" />
+    <Compile Include="Variable.cs" />
+    <Compile Include="Executor.cs" />
+    <Compile Include="ExecutorContext.cs" />
+    <Compile Include="Executors.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SR.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+<inputparameter name="FirstName" value="" persist="true"/>
+<inputparameter name="LastName" value="" persist="true"/>
+<inputparameter name="EmailAddress" value="" persist="true"/>
+<inputparameter name="Birthday" value="" persist="true"/>

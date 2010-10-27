@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yoGomee.Data", "yoGomee.Data.csproj", "{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

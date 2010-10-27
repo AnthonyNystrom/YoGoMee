@@ -1,0 +1,8 @@
+<inputparameter name="UserName" value="" persist="true"/>
+<inputparameter name="Password" value="" persist="true"/>
+
+
+<set x = 123/541 />
+
+
+<action type="text" message="{x}"/>

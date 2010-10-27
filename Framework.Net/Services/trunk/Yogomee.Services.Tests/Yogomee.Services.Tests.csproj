@@ -1,0 +1,105 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB997E40-48BB-4023-956A-141A7E4EF1AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yogomee.Services.Tests</RootNamespace>
+    <AssemblyName>Yogomee.Services.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=2.6.1014.1, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Mock\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Decorators\Specs_for_FriendDecorator\Ctor_factory_repository.cs" />
+    <Compile Include="Decorators\Specs_for_FriendDecorator\When_add_friend.cs" />
+    <Compile Include="Decorators\Specs_for_FriendDecorator\When_creating_friend.cs" />
+    <Compile Include="Decorators\Specs_for_FriendDecorator\When_get_friend.cs" />
+    <Compile Include="Decorators\Specs_for_FriendDecorator\When_get_friends_for_member.cs" />
+    <Compile Include="Decorators\Specs_for_FriendDecorator\When_remove_friend.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\Ctor_factory_repository.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\When_add_gomee.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\When_creating_gomee.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\When_get_gomee.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\When_get_mine_gomees.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\When_get_theirs_gomees.cs" />
+    <Compile Include="Decorators\Specs_for_GomeeDecorator\When_remove_gomee.cs" />
+    <Compile Include="Decorators\Specs_for_MemberDecorator\Ctor_factory_repository.cs" />
+    <Compile Include="Decorators\Specs_for_MemberDecorator\When_add_member.cs" />
+    <Compile Include="Decorators\Specs_for_MemberDecorator\When_creating_member.cs" />
+    <Compile Include="Decorators\Specs_for_MemberDecorator\When_get_member.cs" />
+    <Compile Include="Decorators\Specs_for_MemberDecorator\When_get_member_by_email.cs" />
+    <Compile Include="Decorators\Specs_for_MemberDecorator\When_remove_member.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\Ctor_factory_repository.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\When_add_target.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\When_creating_target.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\When_get_target.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\When_get_targets_for_gomee.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\When_get_targets_for_member.cs" />
+    <Compile Include="Decorators\Specs_for_TargetDecorator\When_remove_target.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Genetibase.ServiceModel\Genetibase.ServiceModel.csproj">
+      <Project>{D4AC0669-8B08-4100-87ED-BFCFE70F0EBE}</Project>
+      <Name>Genetibase.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yogomee.Services.DomainModel\Yogomee.Services.DomainModel.csproj">
+      <Project>{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}</Project>
+      <Name>Yogomee.Services.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yogomee.Services.Storage\Yogomee.Services.Storage.csproj">
+      <Project>{214DEBEF-0230-4509-A585-346BD2E94186}</Project>
+      <Name>Yogomee.Services.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yogomee.Services\Yogomee.Services.csproj">
+      <Project>{9C01BDD5-4874-4E29-A62A-34DA1E0EFBA4}</Project>
+      <Name>Yogomee.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Engines\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

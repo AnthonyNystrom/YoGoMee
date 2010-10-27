@@ -1,0 +1,122 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0849ACD-570B-4BB2-B687-040FDFB1DA08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yogomee.Services.Storage.Tests</RootNamespace>
+    <AssemblyName>Yogomee.Services.Storage.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NHibernate\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NHibernate\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate, Version=2.0.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SqlServerCe\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specs_for_FriendRepository\Ctor_session.cs" />
+    <Compile Include="Specs_for_FriendRepository\When_add_friend.cs" />
+    <Compile Include="Specs_for_FriendRepository\When_get_friend.cs" />
+    <Compile Include="Specs_for_FriendRepository\When_get_friends_for_member.cs" />
+    <Compile Include="Specs_for_FriendRepository\When_remove_friend.cs" />
+    <Compile Include="Specs_for_GomeeRepository\Ctor_session.cs" />
+    <Compile Include="Specs_for_GomeeRepository\When_add_gomee.cs" />
+    <Compile Include="Specs_for_GomeeRepository\When_get_gomee.cs" />
+    <Compile Include="Specs_for_GomeeRepository\When_get_mine_gomees.cs" />
+    <Compile Include="Specs_for_GomeeRepository\When_get_theirs_gomees.cs" />
+    <Compile Include="Specs_for_GomeeRepository\When_remove_gomee.cs" />
+    <Compile Include="Specs_for_MemberRepository\When_get_member_by_email.cs" />
+    <Compile Include="Specs_for_TargetRepository\Ctor_session.cs" />
+    <Compile Include="Specs_for_TargetRepository\When_add_target.cs" />
+    <Compile Include="Specs_for_TargetRepository\When_get_target.cs" />
+    <Compile Include="Specs_for_TargetRepository\When_get_targets_for_gomee.cs" />
+    <Compile Include="Specs_for_TargetRepository\When_get_targets_for_member.cs" />
+    <Compile Include="Specs_for_TargetRepository\When_remove_target.cs" />
+    <Compile Include="Specs_for_MemberRepository\Ctor_session.cs" />
+    <Compile Include="Specs_for_MemberRepository\When_add_member.cs" />
+    <Compile Include="Specs_for_MemberRepository\When_get_member.cs" />
+    <Compile Include="Specs_for_MemberRepository\When_remove_member.cs" />
+    <Compile Include="Specs_for_UnitOfWork\Ctor_default.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yogomee.Services.DomainModel\Yogomee.Services.DomainModel.csproj">
+      <Project>{CF85BE7A-4A83-4E01-A1C1-E53894E65AB2}</Project>
+      <Name>Yogomee.Services.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yogomee.Services.Storage\Yogomee.Services.Storage.csproj">
+      <Project>{214DEBEF-0230-4509-A585-346BD2E94186}</Project>
+      <Name>Yogomee.Services.Storage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestDatabase.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)..\SqlServerCe\sqlce*.dll $(ProjectDir)$(OutDir)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

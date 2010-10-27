@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="connection.connection_string">server=72.167.29.167\SQLEXPRESS;database=yogomee;uid=yogomeeadmin;password=456kjls562;Max Pool Size=200; Min Pool Size=20;</property>
+    <property name="show_sql">true</property>
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,5 @@
+<parameters><inputparameter name="FirstName">Lorenzo</inputparameter>
+<inputparameter name="LastName">botley</inputparameter>
+<inputparameter name="EmailAddress">aaa@dd.com</inputparameter>
+<inputparameter name="Birthday">10-20-1979</inputparameter>
+</parameters>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300" xmlns:ns1="com.arc90.flexlib.containers.*">
+	<mx:HBox x="39" y="105" width="100%" verticalAlign="middle">
+	</mx:HBox>
+</mx:Canvas>

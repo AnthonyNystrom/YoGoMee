@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Home</string>
+    <string name="app_name">YoGoMe</string><string name="circumgyrate">Circumgryte</string>
+<string name="add_gomee">Add new GoMee</string><string name="current_dir">.</string><string name="exit">Exit</string><string name="ad">..</string><string name="up_one_level">..</string>
+<string name="ok">OK</string>
+<string name="cancel">Cancel</string>
+<string name="title_delete_gomee">Delete GoMee</string>
+<string name="msg_delete_gomee">Confirm delete GoMee :</string>
+<string name="alert_dialog_ok">OK</string>
+<string name="alert_dialog_cancel">Cancel</string>
+<string name="title_gomee_type">GoMee Type</string>
+<string name="gomee">GoMee</string>
+<string name="msg_no_location">Impossible to get the location</string>
+
+<string name="gomee_murales">GoMee Murales</string>
+<string name="gomee_list">GoMee List</string>
+<string name="you_are_in">You in GoMe</string>
+
+
+<string name="ringtone_alert">Ringtone Proximity Alert</string>
+<string name="username">User Name</string>
+<string name="password">Password</string>
+<string name="access">Access</string>
+<string name="proximity_radius">Proximity Radius (mt)</string>
+<string name="proximity">Proximity</string>
+<string name="remember">Remember</string>
+</resources>

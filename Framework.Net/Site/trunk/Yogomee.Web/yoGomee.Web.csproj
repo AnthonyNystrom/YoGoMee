@@ -1,0 +1,228 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3AD227A-C3E0-4D30-8C6B-2F56C2D3FA72}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>yoGomee</RootNamespace>
+    <AssemblyName>yoGomee</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10920.23972, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVN\Web\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2, Version=6.10.6.2, Culture=neutral, PublicKeyToken=4735ae9824c7d3ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVN\Web\Bin\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVN\Web\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependancies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependancies\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVN\Web\Bin\System.Web.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SVN\Web\Bin\System.Web.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Emulator.asmx.cs">
+      <DependentUpon>Emulator.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\WidgetSettings.aspx.cs">
+      <DependentUpon>WidgetSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPages\WidgetSettings.aspx.designer.cs">
+      <DependentUpon>WidgetSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\MyWidgets.aspx.cs">
+      <DependentUpon>MyWidgets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPages\MyWidgets.aspx.designer.cs">
+      <DependentUpon>MyWidgets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\EditWidget.aspx.cs">
+      <DependentUpon>EditWidget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPages\EditWidget.aspx.designer.cs">
+      <DependentUpon>EditWidget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\WidgetStore.aspx.cs">
+      <DependentUpon>WidgetStore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPages\WidgetStore.aspx.designer.cs">
+      <DependentUpon>WidgetStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPages\NewWidget.aspx.cs">
+      <DependentUpon>NewWidget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPages\NewWidget.aspx.designer.cs">
+      <DependentUpon>NewWidget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_code\WebUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="js\BlockUI.js" />
+    <Content Include="MainPages\Index.aspx" />
+    <Content Include="Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeSamples\.svn\all-wcprops" />
+    <None Include="CodeSamples\.svn\entries" />
+    <None Include="CodeSamples\.svn\format" />
+    <None Include="CodeSamples\.svn\text-base\Twitter.xml.svn-base" />
+    <None Include="CodeSamples\.svn\text-base\Twitter2.xml.svn-base" />
+    <Content Include="CodeSamples\Anthony.xml" />
+    <Content Include="CodeSamples\FunXml.xml" />
+    <Content Include="CodeSamples\Browser.xml" />
+    <Content Include="CodeSamples\HTML Get.xml" />
+    <Content Include="CodeSamples\ImageAction.xml" />
+    <Content Include="CodeSamples\Stefano.xml" />
+    <Content Include="CodeSamples\Hamid.xml" />
+    <Content Include="CodeSamples\Alex.xml" />
+    <Content Include="CodeSamples\Lawrence.xml" />
+    <Content Include="CodeSamples\Twitter.xml" />
+    <Content Include="css\jquery.tabs-ie.css" />
+    <Content Include="css\jquery.tabs.css" />
+    <Content Include="css\mainstyles.css" />
+    <Content Include="Emulator.asmx" />
+    <Content Include="js\jquery-1.2.6.min.js" />
+    <Content Include="js\jQuery.intellisense.js" />
+    <Content Include="MainPages\WidgetSettings.aspx" />
+    <Content Include="MainPages\MyWidgets.aspx" />
+    <Content Include="MainPages\EditWidget.aspx" />
+    <Content Include="MainPages\Login.aspx" />
+    <Content Include="MainPages\WidgetStore.aspx" />
+    <Content Include="MainPages\NewWidget.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\YGML\trunk\YGML\YGML Interpreter.csproj">
+      <Project>{B6706DF8-2BEB-44E1-903D-E3AE34FA2916}</Project>
+      <Name>YGML Interpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\YoGoMee_Data\trunk\YoGoMee_Data\yoGomee.Data.csproj">
+      <Project>{69E72A19-0122-49BC-8FA6-4F2A3A6092DA}</Project>
+      <Name>yoGomee.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="CodeSamples\.svn\prop-base\" />
+    <Folder Include="CodeSamples\.svn\props\" />
+    <Folder Include="CodeSamples\.svn\tmp\prop-base\" />
+    <Folder Include="CodeSamples\.svn\tmp\props\" />
+    <Folder Include="CodeSamples\.svn\tmp\text-base\" />
+    <Folder Include="img\" />
+    <Folder Include="widgets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2311</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

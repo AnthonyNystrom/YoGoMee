@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Theme" parent="android:Theme">
+    </style>
+    
+    <style name="Theme.Alert" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/theme_alert</item>
+    </style>
+
+</resources>

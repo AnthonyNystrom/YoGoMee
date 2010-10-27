@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UCM-Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="2.0">
+  <Model UniqueID="8a7b86dc-874d-4b9f-a96c-02b2f33e1a55" Name="YoGoMee" ID="1" Prefix="M" Author="" Company="" Release="" CreationDateValue="12/14/2008 21:56:08">
+    <Actors>
+      <Actor UniqueID="361999ca-c43a-44a5-9b44-4ef9841e68e8" Name="Application" ID="1" Prefix="A">
+        <Attributes>
+          <Description />
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+        <Goals />
+      </Actor>
+    </Actors>
+    <Packages>
+      <Package UniqueID="3ad104c7-4b8b-421f-9275-47fabf0e9929" Name="YoGoMee Mobile Set" ID="1" Prefix="P">
+        <Actors>
+          <Actor UniqueID="5b2dff0c-197d-4fd1-b2cc-7a664cead2c9" Name="Mobile User Set" ID="1" Prefix="A">
+            <Attributes>
+              <Description>This Actor sets a GoMee on the mobile device</Description>
+              <Notes>G1 User
+iPhone User
+BB Bold User</Notes>
+              <RelatedDocuments />
+            </Attributes>
+            <Goals>
+              <Goal UniqueID="bfc179f6-544b-422c-8087-efc3149846ac" Name="1" ID="1" Prefix="">
+                <Description>Simple SMS based installation</Description>
+              </Goal>
+              <Goal UniqueID="5778afd1-b794-4b3d-9a6f-5c7726995227" Name="2" ID="2" Prefix="">
+                <Description>The simple setting of a GoMee</Description>
+              </Goal>
+            </Goals>
+          </Actor>
+          <Actor UniqueID="5124d181-cec7-470a-ab44-3f09b1b85113" Name="Mobile Application Set" ID="2" Prefix="A">
+            <Attributes>
+              <Description>This Actor consumes and returns the data for the Mobile User Set.</Description>
+              <Notes>Is Site
+Is Web Services
+Is Mobile Application</Notes>
+              <RelatedDocuments />
+            </Attributes>
+            <Goals>
+              <Goal UniqueID="c53ccd61-278a-4e6d-8492-77cbacf0f9df" Name="1" ID="1" Prefix="">
+                <Description>Application consumption and return of data associated with the setting of a GoMee.</Description>
+              </Goal>
+            </Goals>
+          </Actor>
+        </Actors>
+        <Packages />
+        <UseCases>
+          <UseCase UniqueID="591ccf60-903d-4af1-a5ad-700fbaf21df0" Name="Install non SMS" ID="1" Prefix="UC">
+            <Attributes>
+              <Description>non SMS based installation</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="29484ff1-9c11-48cf-b30c-01b4e49157d3" Name="1" ID="1" Prefix="">
+                <Description>Actor locates application in online store.</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="e9b114ae-c595-467d-9412-08eda0419aa5" Name="2" ID="2" Prefix="">
+                <Description>Actor installs application from online store</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="f52a2d27-68b8-454c-8e13-35a8398f41c8" Name="Install via SMS" ID="2" Prefix="UC">
+            <Attributes>
+              <Description>SMS based installation</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="b2afbd30-ed86-4b44-b9af-467508adb166" Name="1" ID="1" Prefix="">
+                <Description>Actor is "Web User" see "Web User" use cases</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="54207114-2f21-447d-b322-a257403697e6" Name="2" ID="2" Prefix="">
+                <Description>&lt;&lt;include&gt;&gt; "Web Sign Up"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions>User is "Web User"</Preconditions>
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="898765ed-b285-4896-a686-1c40e3348961" Name="Load Mobile Sign Up/In UI" ID="3" Prefix="UC">
+            <Attributes>
+              <Description>Actor loads interface</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="9ba8fb9d-80ef-4eb7-9ba1-3cbff7319e20" Name="1" ID="1" Prefix="">
+                <Description>Actor displays Signup/In Interface</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>Internal</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="39109692-7b58-4355-8b7f-f17fecd45de0" Name="Mobile Sign Up" ID="4" Prefix="UC">
+            <Attributes>
+              <Description>Actor enters:
+
+Name, Phone number, email and password</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="9d9ed272-8134-4efa-bca5-1fb13c6553f1" Name="1" ID="1" Prefix="">
+                <Description>Actor inputs name</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="6d032ddb-204d-4c6c-a1b6-8cbe646e8675" Name="2" ID="2" Prefix="">
+                <Description>Acter inputs email</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="3e38b793-4aab-419d-8148-06a325d0ed96" Name="3" ID="3" Prefix="">
+                <Description>Actor inputs email</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="cd997eaa-1555-4fd0-b13f-2c278619c2f0" Name="4" ID="4" Prefix="">
+                <Description>Actor inputs phone number</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="45ff0de7-1128-434e-8944-7cc0fee59ba3" Name="5" ID="5" Prefix="">
+                <Description>Actor submits information</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="0038a7b4-6771-4b01-a74f-ac9b524033ae" Name="Mobile Log In" ID="5" Prefix="UC">
+            <Attributes>
+              <Description>Actor submits Log In information</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="9a6befc7-c90a-4d70-b834-76d64df5c665" Name="1" ID="1" Prefix="">
+                <Description>&lt;&lt;includes&gt;&gt; "Load Mobile Sign Up/In UI"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="6565c5e2-61b3-401b-8939-8ef811275e44" Name="2" ID="2" Prefix="">
+                <Description>Actor inputs username (email)</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="500affd0-0581-43c9-972e-5e48aa49d43a" Name="2.A" ID="2" Prefix="A">
+                <Description>Actor verifies saved username (email)</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+              <Step UniqueID="e993c2df-4460-47f5-8382-5794c73b96f7" Name="3" ID="3" Prefix="">
+                <Description>Actor inputs password</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="0b24fdda-15a0-4804-83be-a4c576263e18" Name="3.A" ID="3" Prefix="A">
+                <Description>Actor verifies saved password</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+              <Step UniqueID="8a5d3999-2f90-4760-840f-e3f35373e956" Name="4" ID="4" Prefix="">
+                <Description>Actor submits information</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="f9d1c87a-424a-4317-be48-0ada3ea42433" Name="4.A" ID="4" Prefix="A">
+                <Description>Actor veriries saved information and submits</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions>"Load Mobile Sign Up/In UI" </Preconditions>
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="0a2983f1-07a8-455d-8cd4-b3d4fc798e83" Name="Load Mobile Primary UI" ID="6" Prefix="UC">
+            <Attributes>
+              <Description>Actor loads primary UI</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="46537d8c-0388-4871-b0dc-c43c4335a12c" Name="1" ID="1" Prefix="">
+                <Description>Load UI for logged in "Mobile User Set"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>Internal</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="a154190e-9944-41c0-8872-b48351862b72" Name="Load Mobile User Data" ID="7" Prefix="UC">
+            <Attributes>
+              <Description>Actor loads user data</Description>
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="0b21c5e7-6068-4ec7-b964-522d4c736a33" Name="1" ID="1" Prefix="">
+                <Description>Load specific user data for "Mobile User Set"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>Internal</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="8ce2479a-2847-4b02-b7aa-de60489c7c6d" Name="Create GoMee" ID="8" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="e4d5e84b-4935-4cc8-8c90-5495cb15272a" Name="1" ID="1" Prefix="">
+                <Description>Actor selects create GoMee</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="31424e88-e220-43d3-aefd-b27f05e7f25b" Name="2" ID="2" Prefix="">
+                <Description>"Mobile Application Set" asks Current Location or Remote Location</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="bcf5c24c-67c8-4c96-a1be-a7da1356b65b" Name="Select Current Location" ID="9" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="ec3e66e4-6c6b-4d03-8817-4818e27c1f95" Name="1" ID="1" Prefix="">
+                <Description>"Mobile Application Set" displays map with actors current location.</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="129bce62-247d-491b-882a-a9cb4e6263b6" Name="2" ID="2" Prefix="">
+                <Description>Actor selects their current location</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="c30d5736-0415-4732-a6ad-37b54c1cdeac" Name="Select Remote Location" ID="10" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="9f3bd6ec-48f1-437d-8346-b7e50db01a33" Name="1" ID="1" Prefix="">
+                <Description>"Mobile Application Set" displays map with actors current location and search field.</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="f1d0f718-91a3-4f47-ac8b-534ec27549d1" Name="2" ID="2" Prefix="">
+                <Description>Actor selects location on the map</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="db4d0644-cfe0-4191-9049-fbf8cb87f75b" Name="2.A" ID="2" Prefix="A">
+                <Description>Actor enters search query in map interface</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+              <Step UniqueID="7aeac85e-df2a-4776-a328-e22774f2633e" Name="2.A.1" ID="2" Prefix="A">
+                <Description>Actor selects location on the map</Description>
+                <ChildID>1</ChildID>
+                <Type>AlternativeChild</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="f9ed4d47-53c2-4591-bae3-003304719ee0" Name="Select Self" ID="11" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="34cf7890-30b6-4382-ba89-a7409b966b08" Name="1" ID="1" Prefix="">
+                <Description>"Mobile Application Set" asks actor is this GoMee for you or a contact of yours</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="3b9ac4d3-1a0d-49d9-8fe8-f830da38c998" Name="2" ID="2" Prefix="">
+                <Description>Actor selects for me --&gt; "Load YGML Actions"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="57a2fede-c042-4942-8ca8-8e65f52e1133" Name="2.A" ID="2" Prefix="A">
+                <Description>Actor selects for a contact of mine --&gt; "Select Contact Choice"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="8d521856-c736-43b5-9439-8f8a8130c780" Name="Select Contact Choice" ID="12" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="081858fd-b374-49f6-8f07-64721af31a89" Name="1" ID="1" Prefix="">
+                <Description>"Mobile Application Set" asks contact from your phone or online contact</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="df0a515f-1734-4816-921b-e10bf9adb992" Name="2" ID="2" Prefix="">
+                <Description>Actor selects phone contact --&gt; "Load Phone Contacts"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="5e7ae145-c41c-4f37-b770-427ecda8c84a" Name="2.A" ID="2" Prefix="A">
+                <Description>Actor selects online contact --&gt; "Load Online Contacts"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="1a6ffe42-5a05-4def-80f7-721a2fbc065c" Name="Load Phone Contacts" ID="13" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="181a1ab8-4e62-4fca-860e-2d940eaac7e1" Name="1" ID="1" Prefix="">
+                <Description>Actor displays list of phone contacts --&gt; "Select Phone Contact"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="b721201f-95b6-4995-bb92-100b414cbff3" Name="Load Online Contacts" ID="14" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="3af59e7f-f74f-4672-9962-346e7ac55938" Name="1" ID="1" Prefix="">
+                <Description>Actor displays list of Online Contact Providers</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="72e46add-ff61-49b4-b2af-83e2b4e4edba" Name="2" ID="2" Prefix="">
+                <Description>"Mobile User Set" selects a provider</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="f383aba5-315e-4ac0-99e2-0b4d4c6f72bb" Name="3" ID="3" Prefix="">
+                <Description>Actor asks for login information from Provider selection</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="e3b9f735-1751-4876-b00e-d25e0dbfb116" Name="4" ID="4" Prefix="">
+                <Description>"Mobile User Set" enters login information for Provider selection and selects submit</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="edaac5f6-2d19-4f3f-b70b-26ac5a449dcd" Name="5" ID="5" Prefix="">
+                <Description>Actor displays list of contacts from selected online provider --&gt; "Select Online Contact"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="e5e67a5f-d960-4989-a5f9-be75fe2e8ad9" Name="Select Phone Contact" ID="15" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="88755bfe-1a3a-4705-b67c-3ad946d73ce0" Name="1" ID="1" Prefix="">
+                <Description>Actor selects actual contact</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="d3abe7d9-dbcc-444d-8389-ef12ee823001" Name="2" ID="2" Prefix="">
+                <Description>"Mobile Application Set" contact [state] saved</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="3d204dd0-8649-4036-914f-3cf23fc956f6" Name="Select Online Contact" ID="16" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="4a31272f-6005-46fe-b075-3de4d1dde5f7" Name="1" ID="1" Prefix="">
+                <Description>Actor selects actual contact</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="1f90a827-ff33-4227-b2d9-95a6589d9d7a" Name="2" ID="2" Prefix="">
+                <Description>"Mobile Application Set" contact [state] saved</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="b6731e33-aacb-4f95-8330-a13f16751c7a" Name="Load YGML Actions" ID="17" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="741ffe8c-7e6b-4761-8b24-e04b657e7412" Name="1" ID="1" Prefix="">
+                <Description>Actor loads and displays default YGML actions (GoMee)</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="c76480e4-43d4-494b-a01c-fc96df3f4273" Name="2" ID="2" Prefix="">
+                <Description>"Mobile User Set" selects YGML Action (GoMee) --&gt; "YoGoMee YGML Actions"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="9900ff2e-1fbd-4ea3-bbde-3f6e310a5bba" Name="2.A" ID="2" Prefix="A">
+                <Description>"Mobile User Set" selects "Other Action" (GoMee)</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+              <Step UniqueID="2db62192-ea9f-4469-8de6-3efde3bd2ed3" Name="2.B" ID="2" Prefix="B">
+                <Description>Actor loads and displays YGML Actions actor has created at "YoGoMee Web"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+              <Step UniqueID="b1491f35-0356-4c5c-b562-cf4c7e3221c7" Name="2.C" ID="2" Prefix="C">
+                <Description>"Mobile User Set" selects YGML Action (GoMee) --&gt; "YoGoMee YGML Actions"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="abe9ef35-aef4-402c-ad9f-cc4909d7692c" Name="Select GoMee Properties" ID="18" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes>YGML Actions (GoMee) properties is defined as:
+
+Depending on the action selected, such as image or text each actions' specific type contains the property that defines itself. i.e., text requires the actor enter text, image requires the actore select or take a photo.</Notes>
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="d108379d-908f-47a1-9905-a7e4a3709bb6" Name="1" ID="1" Prefix="">
+                <Description>"Mobile Application Set" displays propties of the selected YGML Action (GoMee)</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="1b8b9a7f-9f78-439f-9bfd-e68d0d8bb7e7" Name="2" ID="2" Prefix="">
+                <Description>Actor enters required properties (if YGML Action (GoMee) does indeed have required properties))</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="5d4fca4f-c59b-44a3-8bfc-a8886888f4cb" Name="2.A" ID="2" Prefix="A">
+                <Description>Actor accepts properties as default and makes no change</Description>
+                <ChildID>-1</ChildID>
+                <Type>Alternative</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="c1b07f44-278b-4856-ad18-42714947b6b4" Name="Save GoMee" ID="19" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps>
+              <Step UniqueID="e959b297-1a07-4101-b9e6-639f38f9373a" Name="1" ID="1" Prefix="">
+                <Description>Actor selects Save GoMee</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+              <Step UniqueID="7f242bff-4ee6-474f-bac3-0b1d0f091f22" Name="2" ID="2" Prefix="">
+                <Description>"Mobile Application Set" Processes GoMee --&gt; "YoGoMee GoMee Processing"</Description>
+                <ChildID>-1</ChildID>
+                <Type>Default</Type>
+              </Step>
+            </Steps>
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>5b2dff0c-197d-4fd1-b2cc-7a664cead2c9</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+              <ActiveActor>
+                <ActorUniqueID>5124d181-cec7-470a-ab44-3f09b1b85113</ActorUniqueID>
+                <IsPrimary>false</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="efce4e0a-ae68-47b1-817a-cb692a2cf91c" Name="Edit GoMee" ID="30" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="ec84092d-5a77-488e-8bcc-cabad3893724" Name="Delete GoMee" ID="31" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+        </UseCases>
+        <Requirements />
+        <Attributes>
+          <Description>Use Case for YoGoMee Mobile Users and Mobile application. This is specific to the Set of a GoMee rather than the Get of a GoMee.</Description>
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="2835f5da-100f-4056-98e9-4c92a6105d42" Name="YoGoMee Mobile Get" ID="2" Prefix="P">
+        <Actors>
+          <Actor UniqueID="589671c4-d4fe-492b-94cd-7327e9a4a6dd" Name="Mobile User Get" ID="1" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+          <Actor UniqueID="d1e813ad-9647-4484-80fa-009000689128" Name="Mobile Application Get" ID="2" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+        </Actors>
+        <Packages />
+        <UseCases />
+        <Requirements />
+        <Attributes>
+          <Description />
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="b65726ad-5629-420b-97ad-ed93e6060acc" Name="YoGoMee Web" ID="3" Prefix="P">
+        <Actors>
+          <Actor UniqueID="10c0dbf8-ff32-4668-91bf-6b059c97bae4" Name="Web User" ID="1" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+          <Actor UniqueID="7f569148-2d3c-46a7-9d31-9bddf6d3cb44" Name="Web Application" ID="2" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+        </Actors>
+        <Packages />
+        <UseCases>
+          <UseCase UniqueID="636993b5-980e-4070-bad7-334fbc11f9ef" Name="Web Sign Up" ID="1" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>10c0dbf8-ff32-4668-91bf-6b059c97bae4</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>Temporal</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="27dbfc45-93ae-41ff-a66d-a97cda43c078" Name="Web Log In" ID="2" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="2c2f41d7-1319-4df2-9324-4278d69250cc" Name="Load Web User Data" ID="3" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors>
+              <ActiveActor>
+                <ActorUniqueID>7f569148-2d3c-46a7-9d31-9bddf6d3cb44</ActorUniqueID>
+                <IsPrimary>true</IsPrimary>
+              </ActiveActor>
+            </ActiveActors>
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>Internal</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+        </UseCases>
+        <Requirements />
+        <Attributes>
+          <Description>User Case for YoGoMee Web Users</Description>
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="a56fd059-ecdf-43d2-963c-6d397d472a6e" Name="YoGoMee YGML Web" ID="4" Prefix="P">
+        <Actors>
+          <Actor UniqueID="4996ffcf-d124-47bb-ac58-0f0d1d04e19f" Name="Dev User Web" ID="1" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+        </Actors>
+        <Packages />
+        <UseCases />
+        <Requirements />
+        <Attributes>
+          <Description>Use Case for User developing YGML on the web</Description>
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="0655e88a-e11e-4179-bbba-a30b84c6f5f5" Name="YoGoMee YGML Desktop" ID="5" Prefix="P">
+        <Actors>
+          <Actor UniqueID="81fcee3c-96fd-4c81-86b6-b2e7d5f84ae2" Name="Dev User Desktop" ID="1" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+        </Actors>
+        <Packages />
+        <UseCases />
+        <Requirements />
+        <Attributes>
+          <Description>Use Case for user developing YGML on desktop</Description>
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="60cd2375-4c89-4601-a540-ad620534ccd6" Name="User Contacts" ID="6" Prefix="P">
+        <Actors>
+          <Actor UniqueID="488dc956-d0ab-45bb-b81b-f85aa37ddcb1" Name="User's Contact" ID="1" Prefix="A">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Goals />
+          </Actor>
+        </Actors>
+        <Packages />
+        <UseCases />
+        <Requirements />
+        <Attributes>
+          <Description>Use Case for Users Contact</Description>
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="4253b039-f091-42f3-8dbf-984a17915887" Name="YoGoMee GoMee Processing" ID="7" Prefix="P">
+        <Actors />
+        <Packages />
+        <UseCases>
+          <UseCase UniqueID="de6ca916-f52a-4347-9e8c-13b9c4dfcadf" Name="Upload Message" ID="1" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="9c85d3e1-bcdf-4dd7-9160-680d8237632b" Name="Upload Image" ID="2" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="8d3f0af1-7259-4aa3-bcc1-c409671ee1ed" Name="Upload Audio" ID="3" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="9182dda0-df04-410c-9f7d-a05215153b37" Name="Upload Video" ID="4" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="95d90209-c673-4697-9faf-639a4934ad9e" Name="Select Location Information" ID="5" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="6300bc91-14c7-468e-b64a-f8595077aad4" Name="Load Location Information" ID="6" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="bab540b7-725b-4dd6-8b1c-4158e68b68cd" Name="Lookup Contact User" ID="7" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="fe19b6fb-595c-44cf-8ef4-4dedfec6b25d" Name="SMS Contact User" ID="8" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="2c1400c3-a14f-4836-9d96-2b90cfae3f5d" Name="Email Contact User" ID="9" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="b3189b82-cd63-434e-a849-1d4fdaa663e3" Name="Take Photo" ID="10" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="8cc17424-3bdd-4d7c-8a6b-334e6e86ea66" Name="Record Video" ID="11" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="52c02b77-6b13-4df6-b33b-846d7c763f9e" Name="Record Audio" ID="12" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+          <UseCase UniqueID="ffbe3838-4756-44f7-a890-3255e76fa9b4" Name="Input Message" ID="13" Prefix="UC">
+            <Attributes>
+              <Description />
+              <Notes />
+              <RelatedDocuments />
+            </Attributes>
+            <Steps />
+            <OpenIssues />
+            <ActiveActors />
+            <HistoryItems />
+            <Prose />
+            <Preconditions />
+            <Postconditions />
+            <Release />
+            <AssignedTo />
+            <Priority>1</Priority>
+            <Complexity>Low</Complexity>
+            <Implementation>Scheduled</Implementation>
+            <Level>Summary</Level>
+            <Status>Named</Status>
+            <Trigger>
+              <EventType>External</EventType>
+              <Description />
+            </Trigger>
+          </UseCase>
+        </UseCases>
+        <Requirements />
+        <Attributes>
+          <Description />
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+      <Package UniqueID="9cc61266-c5a5-47b7-91bb-3bac0c6de2c5" Name="YoGoMee YGML Actions" ID="8" Prefix="P">
+        <Actors />
+        <Packages />
+        <UseCases />
+        <Requirements />
+        <Attributes>
+          <Description />
+          <Notes />
+          <RelatedDocuments />
+        </Attributes>
+      </Package>
+    </Packages>
+    <UseCases />
+    <Requirements />
+    <Attributes>
+      <Description />
+      <Notes />
+      <RelatedDocuments />
+    </Attributes>
+    <Glossary />
+    <Stakeholders />
+  </Model>
+</UCM-Document>

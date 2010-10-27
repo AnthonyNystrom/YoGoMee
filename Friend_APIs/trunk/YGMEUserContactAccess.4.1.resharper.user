@@ -1,0 +1,69 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer>
+      <setting name="UsedSolutionBuilderID">0</setting>
+    </integer>
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="5AA93CC9-5229-44A9-8651-D511078D24B3/f:Web.config" caret="2356" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:YahooImporter.cs" caret="100" scrollPosition="0|0" />
+      <File id="7437F678-664C-4C95-BAA7-85EFD650E5D5/f:Main.xaml.cs" caret="171" scrollPosition="0|0" />
+      <File id="7437F678-664C-4C95-BAA7-85EFD650E5D5/f:LoginWindow.xaml.cs" caret="13" scrollPosition="0|0" />
+      <File id="7437F678-664C-4C95-BAA7-85EFD650E5D5/f:App.xaml.cs" caret="202" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:HttpUtils.cs" caret="0" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:HotmailImporter.cs" caret="1654" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="4054" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:CSVReader.cs" caret="1227" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactSource.cs" caret="562" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporterFactory.cs" caret="530" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporter.cs" caret="2005" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:Contact.cs" caret="13" scrollPosition="0|0" />
+      <File id="5AA93CC9-5229-44A9-8651-D511078D24B3/f:YGMEContactAccess.asmx.cs" caret="628" scrollPosition="0|0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="5AA93CC9-5229-44A9-8651-D511078D24B3/f:YGMEContactAccess.asmx.cs" caret="321" scrollPosition="0|9" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:Contact.cs" caret="13" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporter.cs" caret="48" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporter.cs" caret="293" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporter.cs" caret="2084" scrollPosition="0|89" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporterFactory.cs" caret="48" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactImporterFactory.cs" caret="440" scrollPosition="0|1" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactSource.cs" caret="13" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:ContactSource.cs" caret="591" scrollPosition="0|19" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:CSVReader.cs" caret="58" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:CSVReader.cs" caret="3881" scrollPosition="0|99" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:CSVReader.cs" caret="4586" scrollPosition="0|118" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="48" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="1603" scrollPosition="0|23" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="1423" scrollPosition="0|23" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="779" scrollPosition="0|23" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="2112" scrollPosition="0|46" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="2924" scrollPosition="0|62" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="2724" scrollPosition="0|55" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:GmailImporter.cs" caret="4044" scrollPosition="0|87" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:HotmailImporter.cs" caret="48" scrollPosition="0|0" />
+      <File id="3FACE92E-2E15-497C-B2FC-57FF2EA17EF2/f:HotmailImporter.cs" caret="1085" scrollPosition="0|24" />
+      <File id="7437F678-664C-4C95-BAA7-85EFD650E5D5/f:App.xaml.cs" caret="0" scrollPosition="0|0" />
+      <File id="7437F678-664C-4C95-BAA7-85EFD650E5D5/f:LoginWindow.xaml.cs" caret="13" scrollPosition="0|0" />
+      <File id="7437F678-664C-4C95-BAA7-85EFD650E5D5/f:Main.xaml.cs" caret="13" scrollPosition="0|0" />
+      <File id="5AA93CC9-5229-44A9-8651-D511078D24B3/f:YGMEContactAccess.asmx.cs" caret="43" scrollPosition="0|0" />
+      <File id="5AA93CC9-5229-44A9-8651-D511078D24B3/f:YGMEContactAccess.asmx.cs" caret="618" scrollPosition="0|5" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <EnableUnitTesting>True</EnableUnitTesting>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

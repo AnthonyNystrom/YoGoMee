@@ -1,0 +1,3 @@
+<project name="YoGoMee_Android" default="build">
+    <target name="build"/>
+</project>

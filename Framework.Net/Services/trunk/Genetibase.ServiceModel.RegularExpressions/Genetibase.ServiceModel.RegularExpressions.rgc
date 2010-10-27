@@ -1,0 +1,4 @@
+[version(1.0.0.0)]
+
+Yogomee.RegularExpressions.ContentTypeRegex, None, Content-Type:\s*(?<value>.+)
+Yogomee.RegularExpressions.DispositionRegex, None, Content-Disposition:\s*(?<dispositionType>.+?);(?:\s*(?<param>.+?)\s*=\s*"(?<value>.+?)"\s*;?)*

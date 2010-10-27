@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="YGMEContactAccess.asmx.cs" Class="YGMEContactAccessService.YGMEContactAccess" %>
