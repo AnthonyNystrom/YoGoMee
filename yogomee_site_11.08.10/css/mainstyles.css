@@ -1,0 +1,284 @@
+/*===============================================================================
+
+GENERIC PAGE STRUCTURE ELEMENTS
+
+===============================================================================*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,table,th,td {
+margin:0;
+padding:0;
+} 
+
+html, body {
+margin:0px;
+padding:0px;
+width:100%;
+}
+
+body {
+background-color:#6ec5ca;
+color:#666666;
+font-family:Helvetica, Arial, sans-serif;
+font-size:12px;
+line-height:20px;
+}
+
+div.pageWrapper {
+width:960px;
+margin:0px auto;
+text-align:left;
+}
+
+div.pageHeader,
+div.pageContent,
+div.pageFooter,
+div.homepageBanner {
+width:840px;
+margin:0px 30px;
+padding:15px 30px;
+background-color:#ffffff;
+}
+
+	div.pageHeader {
+	height:150px;
+	position:relative;
+	top:0px;
+	left:0px;
+	padding:0px;
+	background-color:#6ec5ca;
+	}
+	
+	div.homepagePromo {
+	padding:15px 30px;
+	margin:0px;
+	background-color:#cc0000;
+	background-image:url(../img/promo-bkg.gif);
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	width:900px;
+	position:relative;
+	top:0px;
+	left:0px;
+	color:#ffffff;
+	}
+	
+.clear {
+line-height:0;
+overflow:hidden;
+clear:both;
+}
+	
+/*===============================================================================
+	GENERIC TYPOGRAPHY
+===============================================================================*/
+
+h1,h2,h3,h4 {
+font-weight:bold;
+margin:0px 0px 20px 0px;
+}
+
+h1 {
+font-size:24px;
+color:#cc0000;
+}
+
+p {
+margin-bottom:20px;
+}
+
+a {
+color:#cc0000;
+text-decoration:underline;
+}
+
+a:hover {
+text-decoration:none;
+}
+
+a img {
+border:none;
+}
+
+.textRight {
+text-align:right;
+}
+
+.textCenter {
+text-align:center;
+}
+	
+/*===============================================================================
+	HEADER ELEMENTS
+===============================================================================*/
+
+div.pageHeader a.siteLogo {
+display:block;
+width:251px;
+height:102px;
+text-decoration:none;
+background-image:url(../img/logo.gif);
+background-position:0px 0px;
+background-repeat:no-repeat;
+position:absolute;
+top:30px;
+left:0px;
+}
+
+	div.pageHeader a.siteLogo span {
+	display:none;
+	}
+	
+div.pageTitle {
+margin-bottom:40px;
+border-bottom:solid 2px #cc0000;
+}
+
+/*===============================================================================
+	GENERIC CONTENT ELEMENTS
+===============================================================================*/
+
+ul.mainNav {
+list-style-type:none;
+text-align:right;
+float:right;
+}
+
+	ul.mainNav li{
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	display:inline;
+	}
+	
+		ul.mainNav li a{
+		text-decoration:none;
+		font-weight:bold;
+		color:#666666;
+		}
+		
+		ul.mainNav li a:hover{
+		color:#cc0000;
+		}
+
+
+div.pageContent {
+padding-top:30px;
+}
+	
+
+/*===============================================================================
+	HOMEPAGE ELEMENTS
+===============================================================================*/
+
+body.home div.pageContent {
+padding:30px;
+}
+
+	body.home div.pageContent img.screenshot {
+	border:solid 1px #666666;
+	float:left;
+	margin:0px 30px 0px 0px;
+	}
+	
+	body.home div.pageContent div.homeContent{
+	width:460px;
+	float:left;
+	}
+	
+		body.home div.pageContent div.homeContent h1 {
+		font-size:40px;
+		font-weight:bold;
+		line-height:40px;
+		color:#cc0000;
+		}
+		
+		body.home div.pageContent div.homeContent p {
+		font-size:12px;
+		font-weight:bold;
+		}
+
+
+/*===============================================================================
+	HOMEPAGE PROMO ELEMENTS
+===============================================================================*/
+
+div.homepagePromo p {
+margin-bottom:10px;
+line-height:16px;
+clear:both;
+}
+
+div.homepagePromo p.promoButtons {
+margin-bottom:10px;
+}
+
+div.homepagePromo p.promoButtons *{
+vertical-align:middle;
+}
+
+div.homepagePromo a {
+color:#ffffff;
+text-decoration:underline;
+}
+
+	div.homepagePromo a:hover {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+div.homepagePromo div.promoBox1,
+div.homepagePromo div.promoBox2,
+div.homepagePromo div.promoBox3 {
+width:266px;
+float:left;
+padding-right:25px;
+margin-right:25px;
+}
+
+div.homepagePromo div.promoBox3 {
+padding-right:0px;
+margin-right:0px;
+}
+
+div.homepagePromo div.promoBox3 p img.icon {
+float:left;
+margin:0px 20px 10px 0px;
+}
+	
+/*===============================================================================
+	FOOTER ELEMENTS
+===============================================================================*/
+
+div.pageFooter {
+background-image:url(../img/stripe.png);
+background-position:top center;
+background-repeat:no-repeat;
+}
+
+body.home div.pageFooter {
+background-image:none;
+}
+
+div.pageFooter p.copyrightNotice {
+float:left;
+}
+
+div.pageFooter ul.footerLinks {
+list-style-type:none;
+text-align:right;
+}
+
+	div.pageFooter ul.footerLinks li{
+	margin:0px;
+	padding:0px 0px 0px 10px;
+	display:inline;
+	}
+	
+		div.pageFooter ul.footerLinks li a{
+		text-decoration:none;
+		font-weight:bold;
+		color:#666666;
+		}
+		
+		div.pageFooter ul.footerLinks li a:hover{
+		color:#cc0000;
+		}

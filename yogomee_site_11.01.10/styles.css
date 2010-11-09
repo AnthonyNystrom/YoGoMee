@@ -1,0 +1,894 @@
+YoNewMarkerControl
+{
+	border-style: solid;
+	border-color: #666666;
+	border-thickness: 1;
+	corner-radius: 6;
+	background-color: #ffffff;
+	background-alpha: 0.6;
+	horizontal-align: center;
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 7;
+	padding-right: 7;
+	vertical-gap: 0;
+}
+
+YoZoomControl
+{
+	border-style: solid;
+	border-color: #666666;
+	border-thickness: 1;
+	corner-radius: 6;
+	background-color: #ffffff;
+	background-alpha: 0.6;
+	horizontal-align: center;
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 7;
+	padding-right: 7;
+	vertical-gap: 0;
+	vertical-align: middle;
+}
+
+Text.NotifierLabel
+{
+	textAlign: center;
+	vertical-align: middle;
+	font-size: 9;
+	font-weight: bold;
+	font-family: Verdana;
+	letter-spacing: 0;
+}
+
+VBox.MapFiltersBox
+{
+	border-style: solid;
+	border-color: #666666;
+	border-thickness: 1;
+	corner-radius: 6;
+	background-color: #ffffff;
+	background-alpha: 0.6;
+	horizontal-align: center;
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 7;
+	padding-right: 7;
+	vertical-gap: 0;
+}
+
+VBox.MapControlsBox
+{
+	border-style: solid;
+	border-color: #666666;
+	border-thickness: 1;
+	corner-radius: 6;
+	background-color: #ffffff;
+	background-alpha: 0.6;
+	horizontal-align: center;
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 7;
+	padding-right: 7;
+	vertical-gap: 0;
+}
+
+HBox.YoMineFilterHeader
+{
+	border-style: solid;
+	border-color: #666666;
+	corner-radius: 5;
+	background-color: #cc0001;
+	horizontal-align: left;
+	vertical-align: middle;
+	padding-left: 5;
+	padding-right: 5;
+	horizontal-gap: 3;
+}
+
+HBox.YoFriendsFilterHeader
+{
+	border-style: solid;
+	border-color: #666666;
+	corner-radius: 5;
+	background-color: #cccc01;
+	horizontal-align: left;
+	vertical-align: middle;
+	padding-left: 5;
+	padding-right: 5;
+	horizontal-gap: 3;
+}
+
+HBox.YoTheirsFilterHeader
+{
+	border-style: solid;
+	border-color: #666666;
+	corner-radius: 5;
+	background-color: #000000;
+	horizontal-align: left;
+	vertical-align: middle;
+	padding-left: 5;
+	padding-right: 5;
+	horizontal-gap: 3;
+}
+
+/*
+ YoPanel
+*/
+Canvas.YoPanelSubstrate
+{
+	backgroundColor: #FFFFFF;
+	background-alpha: 0.8;
+	borderThickness: 1;
+	borderStyle: solid;
+	cornerRadius: 5;
+	borderColor: #666666;
+}
+HBox.YoPanelHeader
+{
+	border-style: solid;
+	border-color: #666666;
+	corner-radius: 5;
+	background-color: #666666;
+	horizontal-align: left;
+	vertical-align: middle;
+	padding-left: 5;
+	padding-right: 5;
+	horizontal-gap: 3;
+}
+Text.YoPanelLabel
+{
+	fontSize: 10;
+	color: #ffffff;
+}
+
+/*
+ MapExpand
+*/
+VBox.MapExpandControl
+{
+	padding-top: 2;
+	padding-bottom: 1;
+	padding-left: 1;
+	padding-right: 1;
+	vertical-gap: 0;
+	vertical-align: middle;
+	backgroundColor: #666666;
+	background-alpha: 0;
+	borderStyle: solid;
+	borderThickness: 0;
+	cornerRadius: 5;
+}
+
+/*
+ MapType
+*/
+VBox.MapTypeContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 10;
+	padding-right: 10;
+	vertical-gap: 0;
+}
+RadioButton.MapTypeNormal
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+RadioButton.MapTypeHybrid
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+RadioButton.MapTypePhysical
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+RadioButton.MapTypeSatellite
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+
+/*
+ MarkersFilter
+*/
+VBox.MarkersFilterContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 10;
+	padding-right: 10;
+	vertical-gap: 0;
+}
+CheckBox.MarkersFilterHomes
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+CheckBox.MarkersFilterGomees
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+
+/*
+ IvitesFilter
+*/
+VBox.InvitesFilterContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 10;
+	padding-right: 10;
+	vertical-gap: 0;
+}
+CheckBox.InvitesFilterFriends
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+CheckBox.InvitesFilterEvents
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+
+/*
+ TagFilter
+*/
+VBox.TagFilterContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 10;
+	padding-right: 10;
+	vertical-gap: 0;
+}
+CheckBox.TagFilterEnabled
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: left;
+}
+
+/*
+ YoProfilePanel
+*/
+VBox.YoProfilePanelContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	vertical-gap: 0;
+}
+Text.YoProfilePanelLogin
+{
+	padding-bottom: 5;
+	color: #333333;
+	fontSize: 14;
+	fontWeight: bold;
+}
+HBox.YoProfilePanelName
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	horizontal-gap: 2;
+}
+Text.YoProfilePanelFirstName
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+}
+Text.YoProfilePanelLastName
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+}
+Text.YoProfilePanelEmail
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+}
+Text.YoProfilePanelInvite
+{
+	font-size: 10;
+	color: #cc0001;
+	font-family: Verdana;
+}
+/*
+ YoEditableProfilePanel
+*/
+VBox.YoEditableProfilePanelContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	vertical-gap: 6;
+}
+Text.YoEditableProfilePanelLogin
+{
+	color: #333333;
+	fontSize: 14;
+	fontWeight: bold;
+	border-style: solid;
+}
+Text.YoEditableProfilePanelLoginLabel
+{
+	color: #333333;
+	fontSize: 14;
+	fontWeight: bold;
+	text-align: right;
+}
+VBox.YoEditableProfilePanelName
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	vertical-gap: 2;
+}
+Text.YoEditableProfilePanelFirstNameLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTextInput.YoEditableProfilePanelFirstName
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableProfilePanelLastNameLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTextInput.YoEditableProfilePanelLastName
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableProfilePanelEmailLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTextInput.YoEditableProfilePanelEmail
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+
+/*
+ YoLocationPanel
+*/
+VBox.YoLocationPanelContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	vertical-gap: 0;
+}
+Text.YoLocationPanelCaption
+{
+	padding-bottom: 5;
+	color: #333333;
+	fontSize: 14;
+	fontWeight: bold;
+}
+Text.YoLocationPanelAddress
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+}
+Text.YoLocationPanelDescription
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+}
+Text.YoLocationPanelCommon
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+}
+
+/*
+ YoEditableLocationPanel
+*/
+VBox.YoEditableLocationPanelContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	vertical-gap: 6;
+}
+YoTextInput.YoEditableLocationPanelCaption
+{
+	color: #333333;
+	fontSize: 14;
+	fontWeight: bold;
+	border-style: solid;
+}
+Text.YoEditableLocationPanelCaptionLabel
+{
+	color: #333333;
+	fontSize: 14;
+	fontWeight: bold;
+	text-align: right;
+}
+YoTextInput.YoEditableLocationPanelAddress
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableLocationPanelAddressLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+CheckBox.YoEditableLocationPanelFindAddress
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTextArea.YoEditableLocationPanelDescription
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableLocationPanelDescriptionLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+CheckBox.YoEditableLocationPanelCommon
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTagsInput.YoEditableLocationPanelTags
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableLocationPanelTagsLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+
+/*
+ YoTwitterPanel
+*/
+VBox.YoTwitterPanelContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	vertical-gap: 5;
+}
+Text.YoTwitterPanelLogin
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoTwitterPanelLoginLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTextInput.YoTwitterPanelSecret
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoTwitterPanelSecretLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+Text.YoTwitterPanelOnAdd
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+Text.YoTwitterPanelOnSave
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+Text.YoTwitterPanelOnDelete
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+
+/*
+ YoEditableTwitterPanel
+*/
+VBox.YoEditableTwitterPanelContent
+{
+	padding-top: 5;
+	padding-bottom: 5;
+	vertical-gap: 5;
+}
+YoTextInput.YoEditableTwitterPanelLogin
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableTwitterPanelLoginLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+YoTextInput.YoEditableTwitterPanelSecret
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	border-style: solid;
+}
+Text.YoEditableTwitterPanelSecretLabel
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+CheckBox.YoEditableTwitterPanelOnAdd
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+CheckBox.YoEditableTwitterPanelOnSave
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+CheckBox.YoEditableTwitterPanelOnDelete
+{
+	font-size: 10;
+	color: #333333;
+	font-family: Verdana;
+	text-align: right;
+}
+
+/*
+ YoLocationMarker
+*/
+VBox.YoLocationMarkerContent
+{
+	vertical-gap: 4;
+	padding-left: 5;
+    padding-right: 10;
+    padding-top: 5;
+    padding-bottom: 15;
+}
+VBox.YoLocationMarkerEdit
+{
+	vertical-gap: 4;
+	padding-left: 5;
+    padding-right: 10;
+    padding-top: 5;
+    padding-bottom: 15;
+}
+
+/*
+ YoProfileMarker
+*/
+VBox.YoProfileMarkerContent
+{
+	vertical-gap: 4;
+	padding-left: 5;
+    padding-right: 10;
+    padding-top: 5;
+    padding-bottom: 15;
+}
+VBox.YoProfileMarkerEdit
+{
+	vertical-gap: 4;
+	padding-left: 5;
+    padding-right: 10;
+    padding-top: 5;
+    padding-bottom: 15;
+}
+
+global
+{
+	backgroundGradientAlphas: 1.0, 1.0;
+	backgroundGradientColors: #FFFFFF, #FFFFFF;
+	fontFamily: Arial;
+	color: #FFFFFF;
+	paddingLeft: 0;
+	paddingTop: 0;
+	paddingRight: 0;
+	paddingBottom: 0;
+	backgroundAlpha: 1.0;
+}
+Button.search
+{
+	upSkin: Embed(source="resources/btn_search.png");
+	overSkin: Embed(source="resources/btn_search.png");
+	downSkin: Embed(source="resources/btn_search.png");
+	disabledSkin: Embed(source="resources/btn_search.png");
+	selectedUpSkin: Embed(source="resources/btn_search.png");
+	selectedOverSkin: Embed(source="resources/btn_search.png");
+	selectedDownSkin: Embed(source="resources/btn_search.png");
+	selectedDisabledSkin: Embed(source="resources/btn_search.png");
+}
+TextInput.search
+{
+	borderStyle: none;
+	borderSkin: Embed(source="resources/search_input.png",scaleGridRight="327",scaleGridLeft="1",scaleGridTop="1",scaleGridBottom="24");
+	fontSize: 15;
+	color: #CC0001;
+	fontWeight: bold;
+	paddingLeft: 5;
+	paddingBottom: 0;
+	paddingTop: 3;
+	borderThickness: 0;
+}
+Text.YoEntryTitle
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #333333;
+}
+Text.CaptionLabel
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #333333;
+	text-align: right;
+}
+TextInput.YoEntryTitle
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #333333;
+	border-style: solid;
+}
+TextInput.YoEntryTitleDirty
+{
+	fontSize: 14;
+	fontWeight: bold;
+	color: #7f0000;
+	border-style: solid;
+}
+
+Text.YoEntryAddress
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+}
+Text.AddressLabel
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	text-align: right;
+}
+TextInput.YoEntryAddress
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+TextInput.YoEntryAddressDirty
+{
+	fontSize: 10;
+	color: #7f0000;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+Text.YoEntryContent
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+}
+Text.DescriptionLabel
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	text-align: right;
+}
+TextArea.YoEntryContent
+{
+	fontSize: 10;
+	color: #333333;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+TextArea.YoEntryContentDirty
+{
+	fontSize: 10;
+	color: #7f0000;
+	fontFamily: Verdana;
+	border-style: solid;
+}
+Text.YoEntryRemove
+{
+	color: #333333;
+	textDecoration: underline;
+	fontFamily: Verdana;
+}
+Text.YoEntryEdit
+{
+	color: #333333;
+	textDecoration: underline;
+	fontFamily: Verdana;
+}
+Text.country
+{
+	fontSize: 12;
+	fontWeight: bold;
+	textDecoration: normal;
+	fontFamily: Arial;
+}
+YoButton
+{
+	cornerRadius: 1;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	disabledColor: #FFFFFF;
+	borderColor: #666666;
+	themeColor: #666666;
+	fontStyle: normal;
+	fontWeight: normal;
+	backgroundAlpha: 1.0;
+	fillAlphas: 0.0, 0.0, 0.0, 0.0;
+	fillColors: #FFFFFF, #FFFFFF;
+	upSkin: Embed(source="resources/btn_black.png");
+	overSkin: Embed(source="resources/btn_black.png");
+	downSkin: Embed(source="resources/btn_black.png");
+	disabledSkin: Embed(source="resources/btn_black.png");
+	selectedUpSkin: Embed(source="resources/btn_red.png");
+	selectedOverSkin: Embed(source="resources/btn_red.png");
+	selectedDownSkin: Embed(source="resources/btn_red.png");
+	selectedDisabledSkin: Embed(source="resources/btn_red.png");
+	paddingTop: 0;
+	paddingBottom: 6;
+	fontSize: 12;
+	fontFamily: "HelveticaNeue LT 95 Black";
+}
+YoEntry
+{
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	horizontal-gap: 5;
+	vertical-gap: 0;
+	border-color: #666666;
+}
+YoEntryList
+{
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	horizontal-gap: 0;
+	vertical-gap: 10;
+	border-color: #666666;
+}
+
+Text.HelveticaRoman
+{
+	color: #FFFFFF;
+	/*fontFamily: "HelveticaNeue LT 55 Roman";*/
+	fontWeight: normal;
+	/*letterSpacing: 1.5;*/
+	fontStyle: normal;
+}
+
+Button.Go
+{
+	color: #DE0000;
+	fillAlphas: 1.0, 1.0, 1.0, 1.0;
+	fillColors: #FFFFFF, #FFFFFF;
+	fontSize: 18;
+	fontFamily: "HelveticaNeue LT 95 Black";
+	fontWeight: normal;
+	paddingTop: 2;
+}
+
+@font-face
+{
+	fontFamily: "HelveticaNeue LT 55 Roman";
+	fontWeight: normal;
+	fontStyle: normal;
+	src: local("HelveticaNeue LT 55 Roman");
+}
+
+@font-face
+{
+	fontFamily: "HelveticaNeue LT 95 Black";
+	fontWeight: normal;
+	fontStyle: normal;
+	src: local("HelveticaNeue LT 95 Black");
+}
+
+@font-face
+{
+	fontFamily: "HelveticaNeue LT 95 Black";
+	fontWeight: bold;
+	fontStyle: normal;
+	src: local("HelveticaNeue LT 95 Black");
+}
